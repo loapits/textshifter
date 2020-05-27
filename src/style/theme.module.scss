@@ -1,0 +1,14 @@
+.switchTheme{
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  background: url('../common//theme/moon.svg') no-repeat center top/cover;
+  cursor: pointer;
+  opacity: .7;
+
+  &:hover{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,35 @@
+.navigation{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 50px;
+  width: 80%;
+  margin: 50px auto 0 auto;
+
+  a{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: #808080;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 7px;
+    height: 40px;
+  }
+  select{
+    display: grid;
+    background: #808080;
+    border: 1px solid #000;
+    border-radius: 7px;
+    color: #fff;
+    text-align-last: center;
+
+    option{
+      background: #fff;
+      color: #000;
+    }
+  }
+  a:hover, select:hover{
+    background: #7b68ee;
+  }
+}
