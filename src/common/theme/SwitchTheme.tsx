@@ -3,6 +3,6 @@ import style from '../../style/theme.module.scss'
 
 export const SwitchTheme = () => {
   return (
-    <div className={style.switchTheme}></div>
+    <button className={style.switchTheme}></button>
   )
 }

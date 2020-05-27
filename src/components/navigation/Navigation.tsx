@@ -1,13 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import style from '../../style/navigation.module.scss'
 
 export const Navigation = () => {
   return (
     <div className={style.navigation}>
-      <NavLink to="/LetterCase">Case</NavLink>
-      <NavLink to="/FDeel">Transliteration</NavLink>
-      <NavLink to="/FDeel">Convert</NavLink>
+      <button>Keyboard Layout</button>
+      <button>Transliteration</button>
+      <button>Convert</button>
       <select id="day">
         <option value="1">Upper case</option>
         <option value="2">Lower case</option>
