@@ -1,24 +1,17 @@
 import React from 'react'
-import { Field, reduxForm } from 'redux-form'
 import style from '../../style/input.module.scss'
 
-const InputArea = () => {
+export const Input = (props: any): any => {
+  
+  const convertText = (e: any) => {
+    let text = e.target.value
+    props.convertText(text)
+  }
+
   return (
     <div className={style.inputs} >
-      <Field 
-        component='textarea' 
-        name='input' 
-        type='text'
-        placeholder='Enter you text'
-      />
-      <Field 
-        component='textarea' 
-        name='output' 
-        type='text'
-        placeholder='Result the edit your text'
-      />
+      <textarea value={props.edit.enterText || ''} onChange={convertText}></textarea>
+      <textarea value={props.edit.editedText || undefined}></textarea>
     </div>
   )
 }
-
-export const Input = reduxForm({form: 'text-input'})(InputArea)

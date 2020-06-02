@@ -1,12 +1,12 @@
 import React from 'react'
 import style from '../../style/navigation.module.scss'
 
-export const Navigation = () => {
+export const Navigation = (props: any) => {
   return (
     <div className={style.navigation}>
-      <button>Keyboard Layout</button>
-      <button>Transliteration</button>
-      <button>Convert</button>
+      <button onClick={props.textUpperCase}>Keyboard Layout</button>
+      <button onClick={props.textLowerCase}>Transliteration</button>
+      <button>Convert to HTML</button>
       <select id="day">
         <option value="1">Upper case</option>
         <option value="2">Lower case</option>
