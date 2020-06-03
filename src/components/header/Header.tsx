@@ -4,7 +4,6 @@ import style from '../../style/header.module.scss'
 import { SwitchTheme } from '../../common/theme/SwitchTheme'
 import { NavLink } from 'react-router-dom'
 
-
 export const Header = () => {
   return (
     <header className={style.header}>

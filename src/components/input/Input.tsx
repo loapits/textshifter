@@ -10,8 +10,8 @@ export const Input = (props: any): any => {
 
   return (
     <div className={style.inputs} >
-      <textarea value={props.edit.enterText || ''} onChange={convertText}></textarea>
-      <textarea value={props.edit.editedText || undefined}></textarea>
+      <textarea value={props.edit.enterText || ''} onChange={convertText} placeholder="Enter your text"></textarea>
+      <textarea value={props.edit.editedText} readOnly placeholder="Your result"></textarea>
     </div>
   )
 }
