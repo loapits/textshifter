@@ -1,8 +1,8 @@
 .navigation{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 50px;
-  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  width: 90%;
   margin: 50px auto 0 auto;
 
   button{
@@ -11,6 +11,7 @@
     align-content: center;
     background: #e9e9e9;
     color: #000;
+    font-size: 15px;
     text-decoration: none;
     border-radius: 7px;
     border-style: none;
@@ -20,22 +21,37 @@
     &:active{
       border-style: none;
     }
-  }
-  select{
-    display: grid;
-    background: #e6e6e6;
-    border-radius: 7px;
-    color: #000;
-    text-align-last: center;
-    border: none;
-
-    option{
-      background: #fff;
-      color: #000;
+    &:hover{
+      background: #ccc;
     }
   }
-  button:hover, select:hover{
-    background: #ccc;
+}
+.navigationDark{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  width: 90%;
+  margin: 50px auto 0 auto;
+
+  button{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: #5648a8;
+    color: #eee;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 7px;
+    border-style: none;
+    height: 40px;
+    cursor: pointer;
+    
+    &:active{
+      border-style: none;
+    }
+    &:hover{
+      background: #524888;
+    }
   }
 }
 .active{

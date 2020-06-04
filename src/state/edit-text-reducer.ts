@@ -1,15 +1,20 @@
-const INPUT_TEXT = "INPUT_TEXT"
+import letters from './letters.json'
+const INPUT_TEXT = 'INPUT_TEXT'
 const UPPER_CASE = 'UPPER_CASE'
 const LOWER_CASE = 'LOWER_CASE'
 const FIRST_TITLE = 'FIRST_TITLE'
 const REGISTER_INVRESION = 'REGISTER_INVRESION'
 const AS_SENTENCE = 'AS_SENTENCE'
 const START_AN_UPPER_CASE = 'START_AN_UPPER_CASE'
+const REPLASE_TEXT = 'REPLASE_TEXT'
+const SET_COPY_CLIPBOARD = 'SET_COPY_CLIPBOARD'
 
 const initialState = {
   voidInp: '',
   enterText: '',
-  editedText: ''
+  editedText: '',
+  replacer: letters.replacer,
+  copied: false
 }
 
 export const editTextReducer = (state = initialState, action: any) =>{
@@ -56,6 +61,18 @@ export const editTextReducer = (state = initialState, action: any) =>{
         editedText: action.editedText
       }
     }
+    case REPLASE_TEXT: {
+      return{
+        ...state,
+        editedText: action.editedText
+      }
+    }
+    case SET_COPY_CLIPBOARD: {
+      return{
+        ...state,
+        copied: true
+      }
+    }
 
     default: 
       return state
@@ -90,4 +107,12 @@ export const startAnUpperCaseCreator = (text: string) => ({
 export const asSentenceCreator = (text: string) => ({
   type: AS_SENTENCE,
   editedText: text
+})
+export const replaceTextCreator = (text: string) => ({
+  type: REPLASE_TEXT,
+  editedText: text
+})
+export const copyToClipboardCreator = (copied: boolean) => ({
+  type: SET_COPY_CLIPBOARD, 
+  copied: copied
 })

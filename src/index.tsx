@@ -5,14 +5,15 @@ import * as serviceWorker from './serviceWorker'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './state/store'
+import SwitchThemeContainer from './components/theme/SwitchTheme-Container';
 import 'normalize.css'
-
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store} >
-        <App />
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Provider store={store}>
+        <SwitchThemeContainer />
+          <App />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

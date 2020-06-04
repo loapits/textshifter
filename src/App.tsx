@@ -1,17 +1,31 @@
 import React from 'react'
-import { Header } from './components/header/Header'
 import { Footer } from './components/footer/Footer'
-import style from './style/index.module.scss'
+import  './style/index.scss'
 import Navigation from './components/navigation/Navigation-Container';
 import Input from './components/input/InputContainer';
+import HeaderContainer from './components/header/Header-Container';
+import { connect } from 'react-redux';
 
-export const App = () => {
-  return (
-    <div className={style.container}>
-      <Header />
-      <Input />
-      <Navigation />
-      <Footer />
-    </div>
-  );
+
+export class App extends React.Component{
+  
+  render() {
+    console.log(this.props);
+    return (
+      <div className='darktheme'>
+        <HeaderContainer />
+        <Input />
+        <Navigation />
+        <Footer />
+      </div>
+    );
+  }
 }
+
+const mapStateToProps = (state: any) => {
+  return{
+  }
+}
+
+
+export default connect(mapStateToProps)(App)

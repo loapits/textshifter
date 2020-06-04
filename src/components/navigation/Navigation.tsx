@@ -3,19 +3,15 @@ import style from '../../style/navigation.module.scss'
 
 export const Navigation = (props: any) => {
   return (
-    <div className={style.navigation}>
-      <button>Keyboard Layout</button>
-      <button>Transliteration</button>
-      <button>Convert to HTML</button>
-      <select id="day" onChange={props.selectEdit}>
-        <option value="" hidden>Change option</option>
-        <option value="upperCase">Upper case</option>
-        <option value="lowerCase">Lower case</option>
-        <option value="firstTitle">First title</option>
-        <option value="invertRegister">Register Inversion</option>
-        <option value="startAnUpperCase">Start an upper case</option>
-        <option value="asSentence">As in the sentence</option>
-      </select>
+    <div className={props.themeName === 'light' ? style.navigation : style.navigationDark}>
+      <button onClick={props.textUpperCase}>Upper case</button>
+      <button onClick={props.textLowerCase}>Lower case</button>
+      <button onClick={props.firstTitle}>First title</button>
+      <button onClick={props.inverseRegister}>Register Inversion</button>
+      <button onClick={props.startAnUpperCase}>Start an upper case</button>
+      <button onClick={props.asSentence}>As in the sentence</button>
+      <button onClick={props.replaceTextRu}>Eng → Ru</button>
+      <button onClick={props.replaceTextEng}>Ru → Eng</button>
     </div>
   )
 }
