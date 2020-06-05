@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Navigation } from './Navigation'
+import { Buttons } from './Buttons'
 import { upperCaseCreator, lowerCaseCreator, firstTitleCreator, registerInversionCreator, startAnUpperCaseCreator, asSentenceCreator, replaceTextCreator } from '../../state/edit-text-reducer'
 
 interface text {
@@ -15,7 +15,7 @@ interface text {
   replaceText: any,
   themeName: string
 }
-class NavigationContainer extends React.Component<text> {
+class ButtonsContainer extends React.Component<text> {
 
   textUpperCase = () => {
     const textEdit = this.props.text
@@ -105,7 +105,7 @@ class NavigationContainer extends React.Component<text> {
 
   render() {
     return (
-      <Navigation
+      <Buttons
         textUpperCase={this.textUpperCase}
         textLowerCase={this.textLowerCase}
         firstTitle={this.firstTitle}
@@ -162,4 +162,4 @@ const mapDispatchToProps = (dispatch: any) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonsContainer)

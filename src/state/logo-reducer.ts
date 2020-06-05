@@ -1,7 +1,7 @@
 const SWITCH_REGISTER = 'SWITCH_REGISTER'
 
 const initialState = {
-  logotext: 'textshifter'
+  logotext: 'Textshifter'
 }
 
 export const logoReducer = (state = initialState, action: any) => {

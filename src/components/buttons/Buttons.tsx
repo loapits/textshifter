@@ -1,9 +1,9 @@
 import React from 'react'
-import style from '../../style/navigation.module.scss'
+import style from '../../style/button.module.scss'
 
-export const Navigation = (props: any) => {
+export const Buttons = (props: any) => {
   return (
-    <div className={props.themeName === 'light' ? style.navigation : style.navigationDark}>
+    <div className={`button ${style.buttons}`}>
       <button onClick={props.textUpperCase}>Upper case</button>
       <button onClick={props.textLowerCase}>Lower case</button>
       <button onClick={props.firstTitle}>First title</button>

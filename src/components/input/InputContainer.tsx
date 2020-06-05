@@ -7,6 +7,7 @@ import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-
 interface text {
   edit: any,
   text: string,
+  copied: boolean,
   copyToClipboard: any,
   convertText: any
 }
@@ -23,6 +24,7 @@ class InputContainer extends React.Component<text> {
       <Input 
         edit={this.props.edit}
         text={this.props.text}
+        copied={this.props.copied}
         copyToClipboard={this.props.copyToClipboard}
         convertText={this.props.convertText}
         saveFileText={this.saveFileText}

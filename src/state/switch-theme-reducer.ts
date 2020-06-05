@@ -1,7 +1,7 @@
 const SWITCH_THEME = 'SWITCH_THEME'
 
 const initialState = {
-  currentTheme: 'light' 
+  mode: 'light' 
 }
 
 export const switchThemeReducer = (state = initialState, action: any) => {
@@ -9,7 +9,7 @@ export const switchThemeReducer = (state = initialState, action: any) => {
     case SWITCH_THEME: {
       return{
         ...state,
-        currentTheme: action.themeName
+        mode: action.mode
       }
     }
 
@@ -18,4 +18,4 @@ export const switchThemeReducer = (state = initialState, action: any) => {
   }
 }
 
-export const switchThemeCreator = (themeName: string) => ({type: SWITCH_THEME, themeName})
+export const switchThemeCreator = (mode: string) => ({type: SWITCH_THEME, mode})

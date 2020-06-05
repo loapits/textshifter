@@ -10,14 +10,16 @@ export const Input = (props: any): any => {
   }
 
   return (
-    <div className={style.inputs}>
-      <textarea value={props.edit.enterText || ''} onChange={convertText} placeholder="Enter your text"></textarea>
+    <div className={style.textarea}>
+      <div>
+        <textarea value={props.edit.enterText || ''} onChange={convertText} placeholder="Enter your text"></textarea>
+      </div>
       <div className={style.resultInput}>
         <textarea value={props.edit.editedText} readOnly placeholder="Your result"></textarea>
         <CopyToClipboard onCopy={props.copyToClipboard} text={props.text}>
-          <button className={style.files}></button>
+          <button className={`clipboard ${style.files}`}></button>
         </CopyToClipboard>
-        <button className={style.saver} onClick={props.saveFileText}></button>
+        <button className={`download ${style.saver}`} onClick={props.saveFileText}></button>
       </div>
     </div>
   )

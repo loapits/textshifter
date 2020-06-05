@@ -1,31 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Footer } from './components/footer/Footer'
-import  './style/index.scss'
-import Navigation from './components/navigation/Navigation-Container';
-import Input from './components/input/InputContainer';
-import HeaderContainer from './components/header/Header-Container';
-import { connect } from 'react-redux';
+import Buttons from './components/buttons/Buttons-Container'
+import Input from './components/input/InputContainer'
+import HeaderContainer from './components/header/Header-Container'
+import { lightTheme, darkTheme } from './theme'
+import { GlobalStyles } from './global'
+import { ThemeProvider } from 'styled-components'
+import './style/index.scss'
 
 
-export class App extends React.Component{
+export const App = () => {
+  const [theme, setTheme] = useState('light')
+
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }
+
   
-  render() {
-    console.log(this.props);
-    return (
-      <div className='darktheme'>
-        <HeaderContainer />
-        <Input />
-        <Navigation />
-        <Footer />
-      </div>
-    );
-  }
+  return (
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <>
+        <GlobalStyles />
+          <div className="container">
+            <HeaderContainer toggleTheme={toggleTheme}/>
+            <Input />
+            <Buttons />
+            <Footer />
+          </div>
+        </>
+    </ThemeProvider>
+  )
 }
-
-const mapStateToProps = (state: any) => {
-  return{
-  }
-}
-
-
-export default connect(mapStateToProps)(App)

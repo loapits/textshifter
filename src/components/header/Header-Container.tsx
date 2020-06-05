@@ -1,17 +1,17 @@
 import React from "react"
 import { connect } from "react-redux"
 import { Header } from "./Header"
-import { compose } from "redux"
 
 interface text {
-  logotext: any
+  logotext: any,
+  toggleTheme: any
 }
 export class HeaderContainer extends React.Component<text>{
-
+  
 
   render() {
     return(
-      <Header logotext={this.props.logotext}/>
+      <Header toggleTheme={this.props.toggleTheme} logotext={this.props.logotext} />
     )
   }
 }
@@ -22,4 +22,5 @@ const mapStateToProps = (state: any) => {
   }
 }
 
-export default compose(connect(mapStateToProps))(HeaderContainer)
+
+export default connect(mapStateToProps)(HeaderContainer)
