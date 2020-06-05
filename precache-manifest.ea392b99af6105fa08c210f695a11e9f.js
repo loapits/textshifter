@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d91d8ae644a6eda47d1cea66628c823",
+    "revision": "ee06d8738936932e7d14b8e684a95d98",
     "url": "/Textshifter/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Textshifter/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "b6cb01ed564b20d876b0",
+    "revision": "22b732d3d26664bf7cc7",
     "url": "/Textshifter/static/css/main.4bc3de78.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Textshifter/static/js/2.9b6cbd68.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b6cb01ed564b20d876b0",
-    "url": "/Textshifter/static/js/main.5ec09c85.chunk.js"
+    "revision": "22b732d3d26664bf7cc7",
+    "url": "/Textshifter/static/js/main.a366a86b.chunk.js"
   },
   {
     "revision": "fd9587d3580b2b2fe613",
