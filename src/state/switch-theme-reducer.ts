@@ -1,7 +1,7 @@
 const SWITCH_THEME = 'SWITCH_THEME'
 
 const initialState = {
-  mode: 'light' 
+  mode: localStorage.getItem('mode') || 'light'
 }
 
 export const switchThemeReducer = (state = initialState, action: any) => {

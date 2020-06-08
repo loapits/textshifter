@@ -1,3 +1,4 @@
+  
 import React, { useState } from 'react'
 import { Footer } from './components/footer/Footer'
 import Buttons from './components/buttons/Buttons-Container'
@@ -9,17 +10,13 @@ import { ThemeProvider } from 'styled-components'
 import './style/index.scss'
 
 
-export const App = () => {
-  const [theme, setTheme] = useState('light')
+export const App = (props:any) => {
+  const [theme, setTheme] = useState(props.mode)
 
   const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark')
-    } else {
-      setTheme('light')
-    }
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+    props.switchTheme()
   }
-
   
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
