@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from "react-redux"
 import { Input } from "./Input"
 import { saveAs } from 'file-saver'
-import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-reducer";
+import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-reducer"
 
 interface text {
   edit: any,
@@ -13,10 +13,9 @@ interface text {
 }
 
 class InputContainer extends React.Component<text> {
-
   saveFileText = () => {
-    const blob = new Blob([this.props.text], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, 'Hello_from_textshifter.txt');
+    const blob = new Blob([this.props.text], {type: "text/plain;charset=utf-8"})
+    saveAs(blob, Math.random().toString(36).substring(1) + '.txt')
   }
   
   render() {
@@ -50,7 +49,7 @@ const mapDispatchToProps = (dispatch: any) => {
     copyToClipboard: () => {
       let action = copyToClipboardCreator(true)
       dispatch(action)
-    }
+    },
   }
 }
 

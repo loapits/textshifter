@@ -125,7 +125,8 @@ const mapStateToProps = (state: any) => {
     edit: state.edit,
     text: state.edit.enterText.trim(),
     replacer: state.edit.replacer,
-    themeName: state.theme.currentTheme
+    themeName: state.theme.currentTheme,
+    buttons: state.edit.buttons
   }
 }
 

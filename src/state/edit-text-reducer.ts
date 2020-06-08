@@ -14,7 +14,7 @@ const initialState = {
   enterText: '',
   editedText: '',
   replacer: letters.replacer,
-  copied: false
+  copied: false,
 }
 
 export const editTextReducer = (state = initialState, action: any) =>{
@@ -26,49 +26,49 @@ export const editTextReducer = (state = initialState, action: any) =>{
       }
     }
     case UPPER_CASE: {
-      return{
+      return {
         ...state,
         editedText: action.editedText
       }
     }
     case LOWER_CASE: { 
-      return{
+      return {
         ...state,
         editedText: action.editedText
       }
     }
     case FIRST_TITLE: {
-      return{
+      return {
         ...state,
         editedText: action.editedText
       }
     }
     case REGISTER_INVRESION: {
-      return{
+      return {
         ...state,
         editedText: action.editedText
       }
     }
     case START_AN_UPPER_CASE: {
-      return{
+      return {
         ...state,
         editedText: action.editedText
       }
     }
     case AS_SENTENCE: {
-      return{
+      return {
         ...state,
         editedText: action.editedText
       }
     }
     case REPLASE_TEXT: {
-      return{
+      return {
         ...state,
         editedText: action.editedText
       }
     }
     case SET_COPY_CLIPBOARD: {
-      return{
+      return {
         ...state,
         copied: true
       }
@@ -88,30 +88,37 @@ export const upperCaseCreator = (text: string) => ({
   type: UPPER_CASE,
   editedText: text
 })
+
 export const lowerCaseCreator = (text: string) => ({
   type: LOWER_CASE,
   editedText: text
 })
+
 export const firstTitleCreator = (text: string) => ({
   type: FIRST_TITLE,
   editedText: text
 })
+
 export const registerInversionCreator = (text: string) => ({
   type: REGISTER_INVRESION,
   editedText: text
 })
+
 export const startAnUpperCaseCreator = (text: string) => ({
   type: START_AN_UPPER_CASE,
   editedText: text
 })
+
 export const asSentenceCreator = (text: string) => ({
   type: AS_SENTENCE,
   editedText: text
 })
+
 export const replaceTextCreator = (text: string) => ({
   type: REPLASE_TEXT,
   editedText: text
 })
+
 export const copyToClipboardCreator = (copied: boolean) => ({
   type: SET_COPY_CLIPBOARD, 
   copied: copied
