@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Textshifter/static/css/main.4bc3de78.chunk.css",
-    "main.js": "/Textshifter/static/js/main.a366a86b.chunk.js",
-    "main.js.map": "/Textshifter/static/js/main.a366a86b.chunk.js.map",
+    "main.css": "/Textshifter/static/css/main.5134c0b8.chunk.css",
+    "main.js": "/Textshifter/static/js/main.e598a58c.chunk.js",
+    "main.js.map": "/Textshifter/static/js/main.e598a58c.chunk.js.map",
     "runtime-main.js": "/Textshifter/static/js/runtime-main.88db9dd9.js",
     "runtime-main.js.map": "/Textshifter/static/js/runtime-main.88db9dd9.js.map",
     "static/css/2.764ccc25.chunk.css": "/Textshifter/static/css/2.764ccc25.chunk.css",
-    "static/js/2.9b6cbd68.chunk.js": "/Textshifter/static/js/2.9b6cbd68.chunk.js",
-    "static/js/2.9b6cbd68.chunk.js.map": "/Textshifter/static/js/2.9b6cbd68.chunk.js.map",
+    "static/js/2.0194daf1.chunk.js": "/Textshifter/static/js/2.0194daf1.chunk.js",
+    "static/js/2.0194daf1.chunk.js.map": "/Textshifter/static/js/2.0194daf1.chunk.js.map",
     "index.html": "/Textshifter/index.html",
-    "precache-manifest.ea392b99af6105fa08c210f695a11e9f.js": "/Textshifter/precache-manifest.ea392b99af6105fa08c210f695a11e9f.js",
+    "precache-manifest.3e0a76e1d1a4cb8dca0a10e61e152963.js": "/Textshifter/precache-manifest.3e0a76e1d1a4cb8dca0a10e61e152963.js",
     "service-worker.js": "/Textshifter/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/Textshifter/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.4bc3de78.chunk.css.map": "/Textshifter/static/css/main.4bc3de78.chunk.css.map",
-    "static/js/2.9b6cbd68.chunk.js.LICENSE.txt": "/Textshifter/static/js/2.9b6cbd68.chunk.js.LICENSE.txt",
+    "static/css/main.5134c0b8.chunk.css.map": "/Textshifter/static/css/main.5134c0b8.chunk.css.map",
+    "static/js/2.0194daf1.chunk.js.LICENSE.txt": "/Textshifter/static/js/2.0194daf1.chunk.js.LICENSE.txt",
     "static/media/clipboard.svg": "/Textshifter/static/media/clipboard.2c09403c.svg",
     "static/media/clipboard_dark.svg": "/Textshifter/static/media/clipboard_dark.e24c2f90.svg",
     "static/media/direct-download.svg": "/Textshifter/static/media/direct-download.d365cb2a.svg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.88db9dd9.js",
     "static/css/2.764ccc25.chunk.css",
-    "static/js/2.9b6cbd68.chunk.js",
-    "static/css/main.4bc3de78.chunk.css",
-    "static/js/main.a366a86b.chunk.js"
+    "static/js/2.0194daf1.chunk.js",
+    "static/css/main.5134c0b8.chunk.css",
+    "static/js/main.e598a58c.chunk.js"
   ]
 }
