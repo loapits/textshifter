@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "321c50a3b74771e605ab510ae2a363bd",
+    "revision": "ba615d1972bbc15be627961889177d6c",
     "url": "/Textshifter/index.html"
   },
   {
-    "revision": "5995505bc566e3f2da13",
+    "revision": "56c0f854050a41e2e8bf",
     "url": "/Textshifter/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "04d02225ad3332d12d4a",
-    "url": "/Textshifter/static/css/main.5134c0b8.chunk.css"
+    "revision": "c19b8850e8688b065c49",
+    "url": "/Textshifter/static/css/main.a5dd57d0.chunk.css"
   },
   {
-    "revision": "5995505bc566e3f2da13",
-    "url": "/Textshifter/static/js/2.0194daf1.chunk.js"
+    "revision": "56c0f854050a41e2e8bf",
+    "url": "/Textshifter/static/js/2.c6ce8002.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Textshifter/static/js/2.0194daf1.chunk.js.LICENSE.txt"
+    "url": "/Textshifter/static/js/2.c6ce8002.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "04d02225ad3332d12d4a",
-    "url": "/Textshifter/static/js/main.3bce17f3.chunk.js"
+    "revision": "c19b8850e8688b065c49",
+    "url": "/Textshifter/static/js/main.8a98b178.chunk.js"
   },
   {
     "revision": "fd9587d3580b2b2fe613",
