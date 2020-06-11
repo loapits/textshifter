@@ -13,12 +13,6 @@
       "sizes": "192x192"
     },
     {
-      "src": "logo133.svg",
-      "type": "image/svg",
-      "sizes": "133x133",
-      "purpose": "any maskable"
-    },
-    {
       "src": "logo144.png",
       "type": "image/png",
       "sizes": "144x144"
