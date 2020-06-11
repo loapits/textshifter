@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c8b34593ae7eb5dfaad58ea39752f554",
+    "revision": "60c20565c24a4023d380f2f71592487c",
     "url": "/Textshifter/index.html"
   },
   {
