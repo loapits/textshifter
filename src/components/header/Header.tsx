@@ -6,7 +6,7 @@ export const Header = (props: any) => {
   return (
     <header className={style.header}>
       <Logo logotext={props.logotext}  upperCase={props.upperCase}/>
-      <button className="theme" onClick={props.toggleTheme}></button>
+      <button name="Switch theme" className="theme" onClick={props.toggleTheme}></button>
     </header>
   )
 }

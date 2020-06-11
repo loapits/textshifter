@@ -12,14 +12,14 @@ export const Input = (props: any): any => {
   return (
     <div className={style.textarea}>
       <div>
-        <textarea value={props.edit.enterText || ''} onChange={convertText} placeholder="Enter your text"></textarea>
+        <textarea id="enterText" value={props.edit.enterText || ''} onChange={convertText} placeholder="Enter your text"></textarea>
       </div>
       <div className={style.resultInput}>
-        <textarea value={props.edit.editedText} readOnly placeholder="Your result"></textarea>
+        <textarea id="editedText" value={props.edit.editedText} readOnly placeholder="Your result"></textarea>
         <CopyToClipboard onCopy={props.copyToClipboard} text={props.text}>
-          <button className={`clipboard ${style.files}`}></button>
+          <button name="Copy to clipboard" className={`clipboard ${style.files}`}></button>
         </CopyToClipboard>
-        <button className={`download ${style.saver}`} onClick={props.saveFileText}></button>
+        <button name="Download edited text" className={`download ${style.saver}`} onClick={props.saveFileText}></button>
       </div>
     </div>
   )
