@@ -1,8 +1,9 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux'
+import thunk from 'redux-thunk';
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { editTextReducer } from './edit-text-reducer'
 import { switchThemeReducer } from './switch-theme-reducer'
-import { logoReducer } from './logo-reducer';
+import { logoReducer } from './logo-reducer'
 
 const redusers = combineReducers({
   edit: editTextReducer,
@@ -11,5 +12,5 @@ const redusers = combineReducers({
 })
 
 export const store = createStore(redusers, composeWithDevTools(
-  applyMiddleware(),
+  applyMiddleware(thunk)
 ))

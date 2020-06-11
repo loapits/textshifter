@@ -159,7 +159,7 @@ const mapDispatchToProps = (dispatch: any) => {
     replaceText: (text: string) => {
       const action = replaceTextCreator(text)
       dispatch(action)
-    },
+    }
   }
 }
 

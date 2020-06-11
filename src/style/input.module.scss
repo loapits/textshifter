@@ -15,8 +15,8 @@
     min-height: 350px;
     border: none;
     border-radius: 10px;
-    margin-right: 0;
     padding: 20px;
+    margin: 0 auto;
   }
   .resultInput{
     display: inline-block;
@@ -49,6 +49,265 @@
 
     &:hover{
       opacity: 1;
+    }
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 1920px){
+  .textarea{ 
+    textarea{
+      max-width: 80%;
+      min-width: 80%;
+      max-height: 450px;
+      min-height: 450px;
+      font-size: 19px;
+      margin: 10px auto 50px auto;
+    }
+    .saver{
+      right: 150px;
+      bottom: 70px;
+    }
+    .files{
+      right: 100px;
+      bottom: 70px;
+    }
+    .saver, .files{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+@media only screen and (min-width: 1750px) and (max-width: 1919px){
+  .textarea{ 
+    textarea{
+      max-width: 80%;
+      min-width: 80%;
+      max-height: 450px;
+      min-height: 450px;
+      font-size: 19px;
+      margin: 20px auto 50px auto;
+    }
+    .saver{
+      right: 150px;
+      bottom: 70px;
+    }
+    .files{
+      right: 100px;
+      bottom: 70px;
+    }
+    .saver, .files{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1749px){
+  .textarea{ 
+    textarea{
+      max-width: 80%;
+      min-width: 80%;
+      max-height: 450px;
+      min-height: 450px;
+      font-size: 18px;
+      margin: 40px auto 50px auto;
+    }
+    .saver{
+      right: 150px;
+      bottom: 70px;
+    }
+    .files{
+      right: 100px;
+      bottom: 70px;
+    }
+    .saver, .files{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1599px){
+  .textarea{ 
+    textarea{
+      max-height: 350px;
+      min-height: 350px;
+      font-size: 17px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+// Mobile
+@media only screen and (min-width: 992px) and (max-width: 1023px){
+  .textarea{ 
+    textarea{
+      max-height: 350px;
+      min-height: 350px;
+      font-size: 17px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+@media only screen and (min-width: 820px) and (max-width: 991px){
+  .textarea{
+    grid-template-columns: 90%;
+
+    textarea{
+      max-height: 250px;
+      min-height: 250px;
+      font-size: 19px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 819px){
+  .textarea{
+    grid-template-columns: 90%;
+
+    textarea{ 
+      max-height: 250px;
+      min-height: 250px;
+      font-size: 19px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 767px){
+  .textarea{
+    grid-template-columns: 90%;
+
+    textarea{ 
+      max-height: 250px;
+      min-height: 250px;
+      font-size: 18px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 29px;
+      height: 29px;
+    }
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 719px){
+  .textarea{
+    grid-template-columns: 90%;
+
+    textarea{ 
+      max-height: 250px;
+      min-height: 250px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 29px;
+      height: 29px;
+    }
+  }
+}
+@media only screen and (min-width: 580px) and (max-width: 639px){
+  .textarea{
+    grid-template-columns: 90%;
+
+    textarea{ 
+      max-height: 250px;
+      min-height: 250px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 29px;
+      height: 29px;
+    }
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 579px){
+  .textarea{
+    grid-template-columns: 90%;
+
+    textarea{ 
+      max-height: 250px;
+      min-height: 250px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 29px;
+      height: 29px;
+    }
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 479px){
+  .textarea{
+    grid-template-columns: 90%;
+    margin: 20px auto;
+
+    textarea{ 
+      max-height: 200px;
+      min-height: 200px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 29px;
+      height: 29px;
+    }
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 399px){
+  .textarea{
+    grid-template-columns: 90%;
+    margin: 20px auto;
+
+    textarea{ 
+      max-height: 180px;
+      min-height: 180px;
+    }
+    .saver{
+      right: 70px;
+    }
+    .saver, .files{
+      width: 27px;
+      height: 27px;
+    }
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 374px){
+  .textarea{
+    grid-template-columns: 90%;
+    margin: 10px auto;
+
+    textarea{ 
+      max-height: 180px;
+      min-height: 180px;
     }
   }
 }

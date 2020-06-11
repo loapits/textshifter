@@ -17,4 +17,8 @@ export const logoReducer = (state = initialState, action: any) => {
   }
 }
 
-export const switchRegister = () => ({type: SWITCH_REGISTER})
+export const switchRegisterCreator = (logotext: string) => ({type: SWITCH_REGISTER, logotext})
+
+export const switchRegisterThunkCreator = (text: string) => async (dispatch: any) => {
+    dispatch(switchRegisterCreator(text.toUpperCase()))
+}

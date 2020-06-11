@@ -1,6 +1,5 @@
   
 import React, { useState } from 'react'
-import { Footer } from './components/footer/Footer'
 import Buttons from './components/buttons/Buttons-Container'
 import Input from './components/input/InputContainer'
 import HeaderContainer from './components/header/Header-Container'
@@ -8,6 +7,7 @@ import { lightTheme, darkTheme } from './theme'
 import { GlobalStyles } from './global'
 import { ThemeProvider } from 'styled-components'
 import './style/index.scss'
+import { Footer } from './components/footer/Footer'
 
 
 export const App = (props:any) => {
@@ -26,8 +26,8 @@ export const App = (props:any) => {
             <HeaderContainer toggleTheme={toggleTheme}/>
             <Input />
             <Buttons />
-            <Footer />
           </div>
+          <Footer />
         </>
     </ThemeProvider>
   )

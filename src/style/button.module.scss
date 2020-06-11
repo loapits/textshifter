@@ -17,3 +17,18 @@
     cursor: pointer;
   }
 }
+
+// Mobile
+@media only screen and (min-width: 0) and (max-width: 1023px){
+  .buttons{
+    grid-template-columns: repeat(auto-fill, minmax(10px));
+    grid-gap: 5%;
+    grid-auto-flow: column;
+    overflow-y: scroll;
+    padding-bottom: 30px;
+    
+    button{
+      width: 100px;
+    }
+  }
+}
