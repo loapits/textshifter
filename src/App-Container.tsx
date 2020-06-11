@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { App } from './App'
 
 interface text {
-  theme: any,
+  theme: string,
   switchTheme: any
 }
 
@@ -30,18 +30,14 @@ class AppContainer extends React.Component<text> {
   }
 }
 
-const mapStateToProps = (state: any) => {
-  return{
-    theme: state.theme.mode
-  }
-}
+const mapStateToProps = (state: any) => ({
+  theme: state.theme.mode
+})
 
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    switchTheme: (mode: any) => {
-      dispatch(switchThemeCreator(mode))
-    }
+const mapDispatchToProps = (dispatch: any) => ({
+  switchTheme: (mode: any) => {
+    dispatch(switchThemeCreator(mode))
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer)

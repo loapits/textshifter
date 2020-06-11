@@ -47,4 +47,17 @@ export const GlobalStyles = createGlobalStyle<any>`
   .download{
     background: url(${({ theme }) => theme.downloadBtn}) no-repeat center top/cover;
   }
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
 `;

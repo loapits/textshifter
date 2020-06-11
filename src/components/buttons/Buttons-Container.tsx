@@ -4,19 +4,19 @@ import { Buttons } from './Buttons'
 import { upperCaseCreator, lowerCaseCreator, firstTitleCreator, registerInversionCreator, startAnUpperCaseCreator, asSentenceCreator, replaceTextCreator } from '../../state/edit-text-reducer'
 
 interface text {
-  text: string, 
-  upperCase: any,
-  lowerCase: any,
-  firstTitle: any,
-  inverseRegister: any,
-  startAnUpperCase: any,
-  asSentence: any,
+  text: string,
+  upperCase: Function,
+  lowerCase: Function,
+  firstTitle: Function,
+  inverseRegister: Function,
+  startAnUpperCase: Function,
+  asSentence: Function,
   replacer: any,
-  replaceText: any,
+  replaceText: Function,
   themeName: string
 }
-class ButtonsContainer extends React.Component<text> {
 
+class ButtonsContainer extends React.Component<text> {
   textUpperCase = () => {
     const textEdit = this.props.text
     if (textEdit) {
@@ -70,7 +70,7 @@ class ButtonsContainer extends React.Component<text> {
     }
   }
 
-  replace = (replacer: any, textEdit: any, replace: any) => {
+  replace = (replacer: any, textEdit: string, replace: string) => {
     for (let i = 0; i < textEdit.length; i++) {                        
       if( replacer[ textEdit[i].toLowerCase() ] !== undefined ) {
         if (textEdit[i] === textEdit[i].toLowerCase()) {
@@ -114,53 +114,48 @@ class ButtonsContainer extends React.Component<text> {
         asSentence={this.asSentence}
         replaceTextEng={this.replaceTextEng}
         replaceTextRu={this.replaceTextRu}
-        themeName={this.props.themeName}
       />
     )
   } 
 }
 
-const mapStateToProps = (state: any) => {
-  return {
-    edit: state.edit,
-    text: state.edit.enterText.trim(),
-    replacer: state.edit.replacer,
-    themeName: state.theme.currentTheme,
-    buttons: state.edit.buttons
-  }
-}
+const mapStateToProps = (state: any) => ({
+  edit: state.edit,
+  text: state.edit.enterText.trim(),
+  replacer: state.edit.replacer,
+  themeName: state.theme.currentTheme,
+  buttons: state.edit.buttons
+})
 
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    upperCase: (text: string) => {
-      const action = upperCaseCreator(text)
-      dispatch(action)
-    },
-    lowerCase: (text: string) => {
-      const action = lowerCaseCreator(text)
-      dispatch(action)
-    },
-    firstTitle: (text: string) => {
-      const action = firstTitleCreator(text)
-      dispatch(action)
-    },
-    inverseRegister: (text: string) => {
-      const action = registerInversionCreator(text)
-      dispatch(action)
-    },
-    startAnUpperCase: (text: string) => {
-      const action = startAnUpperCaseCreator(text)
-      dispatch(action)
-    },
-    asSentence: (text: string) => {      
-      const action = asSentenceCreator(text)
-      dispatch(action)
-    },
-    replaceText: (text: string) => {
-      const action = replaceTextCreator(text)
-      dispatch(action)
-    }
+const mapDispatchToProps = (dispatch: any) => ({
+  upperCase: (text: string) => {
+    const action = upperCaseCreator(text)
+    dispatch(action)
+  },
+  lowerCase: (text: string) => {
+    const action = lowerCaseCreator(text)
+    dispatch(action)
+  },
+  firstTitle: (text: string) => {
+    const action = firstTitleCreator(text)
+    dispatch(action)
+  },
+  inverseRegister: (text: string) => {
+    const action = registerInversionCreator(text)
+    dispatch(action)
+  },
+  startAnUpperCase: (text: string) => {
+    const action = startAnUpperCaseCreator(text)
+    dispatch(action)
+  },
+  asSentence: (text: string) => {
+    const action = asSentenceCreator(text)
+    dispatch(action)
+  },
+  replaceText: (text: string) => {
+    const action = replaceTextCreator(text)
+    dispatch(action)
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(ButtonsContainer)

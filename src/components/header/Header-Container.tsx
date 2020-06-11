@@ -1,18 +1,17 @@
 import React from "react"
 import { connect } from "react-redux"
-import { switchRegisterThunkCreator } from "../../state/logo-reducer"
 import { Header } from "./Header"
+// import { switchRegisterThunkCreator } from "../../state/logo-reducer"
 
 interface text {
-  logotext: any,
-  toggleTheme: any,
-  switchReg: any
+  logotext: string,
+  toggleTheme: any
 }
 
-export class HeaderContainer extends React.Component<text>{
+export class HeaderContainer extends React.Component<text> {
   render() {
     return(
-      <Header 
+      <Header
         toggleTheme={this.props.toggleTheme} 
         logotext={this.props.logotext} 
       />
@@ -20,20 +19,16 @@ export class HeaderContainer extends React.Component<text>{
   }
 }
 
-const mapStateToProps = (state: any) => {
-  return {
-    logotext: state.logo.logotext,
-    mode: state.theme.mode
-  }
-}
+const mapStateToProps = (state: any) => ({
+  logotext: state.logo.logotext,
+  mode: state.theme.mode
+})
 
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    switchReg: (text: any) => {
-      const action = switchRegisterThunkCreator(text)
-      dispatch(action)      
-    }
-  }
-}
+// const mapDispatchToProps = (dispatch: any) => ({
+//   switchReg: (text: any) => {
+//     const action = switchRegisterThunkCreator(text)
+//     dispatch(action)
+//   }
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer)
+export default connect(mapStateToProps)(HeaderContainer)

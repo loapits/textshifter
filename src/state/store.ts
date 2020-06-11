@@ -5,7 +5,7 @@ import { editTextReducer } from './edit-text-reducer'
 import { switchThemeReducer } from './switch-theme-reducer'
 import { logoReducer } from './logo-reducer'
 
-const redusers = combineReducers({
+export const redusers = combineReducers({
   edit: editTextReducer,
   theme: switchThemeReducer,
   logo: logoReducer
