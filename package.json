@@ -1,8 +1,13 @@
 {
   "name": "textshifter",
   "version": "0.1.0",
-  "homepage": "https://loapits.github.io/Textshifter/",
   "private": true,
+  "author": "Gera Kartashov <gera59377@gmail.com>",
+  "homepage": "https://loapits.github.io/Textshifter/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loapits/Textshifter"
+  },
   "dependencies": {
     "file-saver": "^2.0.2",
     "normalize.css": "^8.0.1",
