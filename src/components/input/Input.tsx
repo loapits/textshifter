@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import style from '../../style/input.module.scss'
 import CopyToClipboard from 'react-copy-to-clipboard'
 
@@ -6,8 +6,8 @@ interface text {
   edit: any,
   text: string, 
   copied: boolean, 
-  copyToClipboard: any, 
-  enterText: (e: any) => void, 
+  copyToClipboard: any,
+  enterText: (event: ChangeEvent<HTMLTextAreaElement>) => void, 
   saveFileText:  () => void
 }
 

@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 import { Buttons } from './Buttons'
 import { upperCaseCreator, lowerCaseCreator, firstTitleCreator, registerInversionCreator, startAnUpperCaseCreator, asSentenceCreator, replaceTextCreator } from '../../state/edit-text-reducer'
 
+/**
+ * General component description in JSDoc format. Markdown is *supported*.
+ */
 interface text {
   text: string,
   upperCase: Function,
@@ -120,7 +123,6 @@ class ButtonsContainer extends React.Component<text> {
 }
 
 const mapStateToProps = (state: any) => ({
-  edit: state.edit,
   text: state.edit.enterText.trim(),
   replacer: state.edit.replacer,
   themeName: state.theme.currentTheme,

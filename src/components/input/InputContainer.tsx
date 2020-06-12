@@ -5,7 +5,7 @@ import { saveAs } from 'file-saver'
 import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-reducer"
 
 interface text {
-  edit: any,
+  edit: object,
   text: string,
   copied: boolean,
   copyToClipboard: Function,
@@ -18,7 +18,7 @@ class InputContainer extends React.Component<text> {
     saveAs(blob, Math.random().toString(36).substring(1) + '.txt')
   }
 
-  enterText = (event: React.ChangeEvent<HTMLInputElement>) => {
+  enterText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     let text = event.target.value
     this.props.enterText(text)
   }

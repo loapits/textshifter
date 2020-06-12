@@ -24,11 +24,24 @@
     grid-template-columns: repeat(auto-fill, minmax(10px));
     grid-gap: 5%;
     grid-auto-flow: column;
-    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     padding-bottom: 30px;
     
     button{
       width: 100px;
+    }
+    &::-webkit-scrollbar{
+      width: 10px;
+      height: 3px;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-width: 100px;
+      background-color: #a0a4d9;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track{
+      border-width: 0;
     }
   }
 }

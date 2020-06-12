@@ -4,11 +4,16 @@
 
 const SWITCH_REGISTER = 'SWITCH_REGISTER'
 
-const initialState = {
+/**
+ * Initializated state of edit reducer
+ * 
+ * @param {string} logotext the text of logo
+ */
+const initialState: object = {
   logotext: 'Textshifter'
 }
 
-export const logoReducer = (state = initialState, action: any) => {
+export const logoReducer = (state = initialState, action: any): object => {
   switch (action.type) {
     case SWITCH_REGISTER: {
       return {
@@ -26,10 +31,10 @@ export const logoReducer = (state = initialState, action: any) => {
   * 
   * Using in Logo.tsx
   * 
-  * @param {string} logotext - first argument, which is mode the theme
-  * @returns {string} return Text of logo in new register
+  * @param {string} logotext the first argument, which is mode the theme
+  * @returns {string} text of logo in new register
   */
-export const switchRegisterCreator = (logotext: string) => ({type: SWITCH_REGISTER, logotext})
+export const switchRegisterCreator = (logotext: string): object => ({type: SWITCH_REGISTER, logotext})
 
 // export const switchRegisterThunkCreator = (text: string) => async (dispatch: any) => {
 //     dispatch(switchRegisterCreator(text.toUpperCase()))

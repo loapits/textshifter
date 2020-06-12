@@ -3,17 +3,13 @@ import Buttons from './components/buttons/Buttons-Container'
 import Input from './components/input/InputContainer'
 import HeaderContainer from './components/header/Header-Container'
 import { lightTheme, darkTheme } from './theme'
-import { GlobalStyles } from './global'
+import { GlobalStyles } from './global_style'
 import { ThemeProvider } from 'styled-components'
 import './style/index.scss'
 import { Footer } from './components/footer/Footer'
+import { AppTypes } from './types'
 
-interface text {
-  mode: string,
-  switchTheme: () => void
-}
-
-export const App: React.FC<text> = ({mode, switchTheme}) => {
+export const App: React.FC<AppTypes> = ({mode, switchTheme}) => {
   const [theme, setTheme] = useState(mode)
 
   const toggleTheme = () => {
