@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { Input } from "./Input"
 import { saveAs } from 'file-saver'
 import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-reducer"
-import { InputContainerTypes } from '../../types'
+import { InputContainerTypes } from '../../interfaces'
 
 class InputContainer extends React.Component<InputContainerTypes> {
   saveFileText = () => {

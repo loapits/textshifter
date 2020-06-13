@@ -7,7 +7,7 @@ import { GlobalStyles } from './global_style'
 import { ThemeProvider } from 'styled-components'
 import './style/index.scss'
 import { Footer } from './components/footer/Footer'
-import { AppTypes } from './types'
+import { AppTypes } from './interfaces'
 
 export const App: React.FC<AppTypes> = ({mode, switchTheme}) => {
 

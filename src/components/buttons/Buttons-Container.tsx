@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Buttons } from './Buttons'
 import { upperCaseCreator, lowerCaseCreator, firstTitleCreator, registerInversionCreator, startAnUpperCaseCreator, asSentenceCreator, replaceTextCreator } from '../../state/edit-text-reducer'
-import { ButtonContainerTypes } from '../../types'
+import { ButtonContainerTypes } from '../../interfaces'
 
 class ButtonsContainer extends React.Component<ButtonContainerTypes> {
   textUpperCase = () => {

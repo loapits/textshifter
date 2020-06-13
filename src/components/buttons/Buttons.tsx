@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../../style/button.module.scss'
-import { ButtonTypes } from '../../types'
+import { ButtonTypes } from '../../interfaces'
 
 export const Buttons: React.FC<ButtonTypes> = (props) => (
   <div className={`button ${style.buttons}`}>

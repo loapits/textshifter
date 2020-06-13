@@ -1,7 +1,7 @@
 import React from 'react'
 import { Logo } from './Logo'
 import style from '../../style/header.module.scss'
-import { HeaderTypes } from '../../types'
+import { HeaderTypes } from '../../interfaces'
 
 
 

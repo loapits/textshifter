@@ -3,7 +3,7 @@ import './style/index.scss'
 import { switchThemeCreator } from './state/switch-theme-reducer'
 import { connect } from 'react-redux'
 import { App } from './App'
-import { AppContainerTypes } from './types'
+import { AppContainerTypes } from './interfaces'
 
 class AppContainer extends React.Component<AppContainerTypes> {
   componentDidUpdate() {

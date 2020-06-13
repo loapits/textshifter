@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../../style/input.module.scss'
 import CopyToClipboard from 'react-copy-to-clipboard'
-import { InputTypes } from '../../types'
+import { InputTypes } from '../../interfaces'
 
 export const Input: React.FC<InputTypes> = ({edit, text, copied, copyToClipboard, enterText, saveFileText}) => (
   <main id="main" className={style.textarea}>

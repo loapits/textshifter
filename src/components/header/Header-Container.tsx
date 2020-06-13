@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { Header } from "./Header"
-import { HeaderContainerTypes } from "../../types"
+import { HeaderContainerTypes } from "../../interfaces"
 // import { switchRegisterThunkCreator } from "../../state/logo-reducer"
 
 
