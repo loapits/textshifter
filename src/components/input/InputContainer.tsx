@@ -3,16 +3,9 @@ import { connect } from "react-redux"
 import { Input } from "./Input"
 import { saveAs } from 'file-saver'
 import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-reducer"
+import { InputContainerTypes } from '../../types'
 
-interface text {
-  edit: object,
-  text: string,
-  copied: boolean,
-  copyToClipboard: Function,
-  enterText: any
-}
-
-class InputContainer extends React.Component<text> {
+class InputContainer extends React.Component<InputContainerTypes> {
   saveFileText = () => {
     const blob = new Blob([this.props.text], {type: "text/plain;charset=utf-8"})
     saveAs(blob, Math.random().toString(36).substring(1) + '.txt')

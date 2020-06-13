@@ -1,14 +1,12 @@
 import React from "react"
 import { connect } from "react-redux"
 import { Header } from "./Header"
+import { HeaderContainerTypes } from "../../types"
 // import { switchRegisterThunkCreator } from "../../state/logo-reducer"
 
-interface text {
-  logotext: string,
-  toggleTheme: any
-}
 
-export class HeaderContainer extends React.Component<text> {
+
+export class HeaderContainer extends React.Component<HeaderContainerTypes> {
   render() {
     return(
       <Header

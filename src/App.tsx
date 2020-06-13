@@ -10,6 +10,7 @@ import { Footer } from './components/footer/Footer'
 import { AppTypes } from './types'
 
 export const App: React.FC<AppTypes> = ({mode, switchTheme}) => {
+
   const [theme, setTheme] = useState(mode)
 
   const toggleTheme = () => {
@@ -22,7 +23,7 @@ export const App: React.FC<AppTypes> = ({mode, switchTheme}) => {
       <>
         <GlobalStyles />
           <div className="container">
-            <HeaderContainer toggleTheme={toggleTheme}/>
+            <HeaderContainer toggleTheme={toggleTheme} />
             <Input />
             <Buttons />
           </div>

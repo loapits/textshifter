@@ -2,24 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Buttons } from './Buttons'
 import { upperCaseCreator, lowerCaseCreator, firstTitleCreator, registerInversionCreator, startAnUpperCaseCreator, asSentenceCreator, replaceTextCreator } from '../../state/edit-text-reducer'
+import { ButtonContainerTypes } from '../../types'
 
-/**
- * General component description in JSDoc format. Markdown is *supported*.
- */
-interface text {
-  text: string,
-  upperCase: Function,
-  lowerCase: Function,
-  firstTitle: Function,
-  inverseRegister: Function,
-  startAnUpperCase: Function,
-  asSentence: Function,
-  replacer: any,
-  replaceText: Function,
-  themeName: string
-}
-
-class ButtonsContainer extends React.Component<text> {
+class ButtonsContainer extends React.Component<ButtonContainerTypes> {
   textUpperCase = () => {
     const textEdit = this.props.text
     if (textEdit) {
@@ -73,7 +58,7 @@ class ButtonsContainer extends React.Component<text> {
     }
   }
 
-  replace = (replacer: any, textEdit: string, replace: string) => {
+  protected replace = (replacer: any, textEdit: string, replace: string) => {
     for (let i = 0; i < textEdit.length; i++) {                        
       if( replacer[ textEdit[i].toLowerCase() ] !== undefined ) {
         if (textEdit[i] === textEdit[i].toLowerCase()) {

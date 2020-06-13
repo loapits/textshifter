@@ -1,18 +1,8 @@
 import React from 'react'
 import style from '../../style/button.module.scss'
+import { ButtonTypes } from '../../types'
 
-interface text {
-  textUpperCase: () => void,
-  textLowerCase: () => void,
-  firstTitle: () => void,
-  inverseRegister: () => void,
-  startAnUpperCase: () => void,
-  asSentence: () => void,
-  replaceTextRu: () => void,
-  replaceTextEng: () => void
-}
-
-export const Buttons: React.FC<text> = (props) => (
+export const Buttons: React.FC<ButtonTypes> = (props) => (
   <div className={`button ${style.buttons}`}>
     <button onClick={props.textUpperCase}>Upper case</button>
     <button onClick={props.textLowerCase}>Lower case</button>

@@ -1,13 +1,11 @@
 import React from 'react'
 import { Logo } from './Logo'
 import style from '../../style/header.module.scss'
+import { HeaderTypes } from '../../types'
 
-interface text {
-  toggleTheme: () => string,
-  logotext: string
-}
 
-export const Header: React.FC<text> = ({toggleTheme, logotext}) => (
+
+export const Header: React.FC<HeaderTypes> = ({toggleTheme, logotext}) => (
   <header className={style.header}>
     <a className="skip-link" href="#main">Skip to main</a>
     <Logo logotext={logotext} />
