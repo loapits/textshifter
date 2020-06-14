@@ -1,5 +1,5 @@
 import {switchRegisterType, ActionsTypes } from "../types/logo_types"
-export const SWITCH_REGISTER = 'SWITCH_REGISTER'
+import { SWITCH_REGISTER } from "./types"
 
 const initialState = {
   logotext: 'Textshifter' as string

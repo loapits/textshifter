@@ -1,5 +1,5 @@
 import { switchThemeType, ActionsTypes } from "../types/theme_types"
-export const SWITCH_THEME = 'SWITCH_THEME'
+import { SWITCH_THEME } from "./types"
 
 const initialState = {
   mode: localStorage.getItem('mode') || 'light' as string

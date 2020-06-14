@@ -1,14 +1,6 @@
 import letters from './letters.json'
 import { enterTextType, upperCaseType, lowerCaseType, firstTitleType, registerInversionType, startAnUpperCaseType, asSentenceType, replaceTextType, copyToClipboardType, ActionsTypes } from '../types/edit_types'
-export const INPUT_TEXT = 'INPUT_TEXT'
-export const UPPER_CASE = 'UPPER_CASE'
-export const LOWER_CASE = 'LOWER_CASE'
-export const FIRST_TITLE = 'FIRST_TITLE'
-export const REGISTER_INVRESION = 'REGISTER_INVRESION'
-export const AS_SENTENCE = 'AS_SENTENCE'
-export const START_AN_UPPER_CASE = 'START_AN_UPPER_CASE'
-export const REPLASE_TEXT = 'REPLASE_TEXT'
-export const SET_COPY_CLIPBOARD = 'SET_COPY_CLIPBOARD'
+import { INPUT_TEXT, UPPER_CASE, LOWER_CASE, FIRST_TITLE, REGISTER_INVRESION, START_AN_UPPER_CASE, AS_SENTENCE, REPLASE_TEXT, SET_COPY_CLIPBOARD } from './types'
 
 const initialState = {
   enterText: '',

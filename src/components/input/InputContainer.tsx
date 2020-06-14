@@ -6,8 +6,9 @@ import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-
 import { InputContainerInterface } from '../../interfaces/input_interface'
 import { Dispatch } from 'redux'
 import { ActionsTypes } from '../../types/edit_types'
+import { stateType } from '../../types/state_type'
 
-class InputContainer extends React.Component<InputContainerInterface> {
+export class InputContainer extends React.Component<InputContainerInterface> {
   saveFileText = () => {
     const blob = new Blob([this.props.text], {type: "text/plain;charset=utf-8"})
     saveAs(blob, Math.random().toString(36).substring(1) + '.txt')
@@ -31,7 +32,7 @@ class InputContainer extends React.Component<InputContainerInterface> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: stateType) => ({
   edit: state.edit,
   enterText: state.edit.enterText,
   text: state.edit.editedText,

@@ -1,4 +1,4 @@
-import { SWITCH_THEME } from "../state/switch-theme-reducer"
+import { SWITCH_THEME } from "../state/types"
 
 export type switchThemeType =  {
   type: typeof SWITCH_THEME

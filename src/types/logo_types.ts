@@ -1,4 +1,4 @@
-import { SWITCH_REGISTER } from "../state/logo-reducer"
+import { SWITCH_REGISTER } from "../state/types"
 
 export type switchRegisterType = {
   type: typeof SWITCH_REGISTER
