@@ -2,9 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Buttons } from './Buttons'
 import { upperCaseCreator, lowerCaseCreator, firstTitleCreator, registerInversionCreator, startAnUpperCaseCreator, asSentenceCreator, replaceTextCreator } from '../../state/edit-text-reducer'
-import { ButtonContainerTypes } from '../../interfaces'
+import { ButtonContainerInterface } from '../../interfaces/buttons_interface'
+import { stateType } from '../../types/state_type'
+import { Dispatch } from 'redux'
+import { ActionsTypes } from '../../types/edit_types'
 
-class ButtonsContainer extends React.Component<ButtonContainerTypes> {
+class ButtonsContainer extends React.Component<ButtonContainerInterface> {
   textUpperCase = () => {
     const textEdit = this.props.text
     if (textEdit) {
@@ -58,9 +61,9 @@ class ButtonsContainer extends React.Component<ButtonContainerTypes> {
     }
   }
 
-  protected replace = (replacer: any, textEdit: string, replace: string) => {
+  protected replace = (replacer: {[key: string]: string}, textEdit: string, replace: string): string => {
     for (let i = 0; i < textEdit.length; i++) {                        
-      if( replacer[ textEdit[i].toLowerCase() ] !== undefined ) {
+      if( replacer[textEdit[i].toLowerCase()] !== undefined ) {
         if (textEdit[i] === textEdit[i].toLowerCase()) {
           replace = replacer[ textEdit[i].toLowerCase() ]    
         } else if (textEdit[i] === textEdit[i].toUpperCase()) {
@@ -78,13 +81,11 @@ class ButtonsContainer extends React.Component<ButtonContainerTypes> {
   }
 
   replaceTextEng = () => {      
-    let textEdit = this.props.text
-    let replacer = this.props.replacer
-    let keys = Object.keys(replacer)
+    const textEdit = this.props.text
+    const replacer: {[key: string]: string} = this.props.replacer
 
-    keys.forEach((key) => {
-      let val = replacer[key]
-      return replacer[val] = key
+    Object.keys(replacer).forEach((key: string): string => {
+      return replacer[replacer[key]] = key
     })
 
     const text = this.replace(replacer,textEdit, '')
@@ -107,14 +108,12 @@ class ButtonsContainer extends React.Component<ButtonContainerTypes> {
   } 
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: stateType) => ({
   text: state.edit.enterText.trim(),
   replacer: state.edit.replacer,
-  themeName: state.theme.currentTheme,
-  buttons: state.edit.buttons
 })
 
-const mapDispatchToProps = (dispatch: any) => ({
+const mapDispatchToProps = (dispatch: Dispatch<ActionsTypes>) => ({
   upperCase: (text: string) => {
     const action = upperCaseCreator(text)
     dispatch(action)

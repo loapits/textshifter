@@ -1,10 +1,13 @@
-const SWITCH_THEME = 'SWITCH_THEME'
+import { switchThemeType, ActionsTypes } from "../types/theme_types"
+export const SWITCH_THEME = 'SWITCH_THEME'
 
-const initialState: object = {
-  mode: localStorage.getItem('mode') || 'light'
+const initialState = {
+  mode: localStorage.getItem('mode') || 'light' as string
 }
 
-export const switchThemeReducer = (state = initialState, action: any): object => {
+export type themeInitialTypes = typeof initialState
+
+export const switchThemeReducer = (state = initialState, action: ActionsTypes): themeInitialTypes => {
   switch (action.type) {
     case SWITCH_THEME: {
       return{
@@ -18,4 +21,4 @@ export const switchThemeReducer = (state = initialState, action: any): object =>
   }
 }
 
-export const switchThemeCreator = (mode: string): object => ({type: SWITCH_THEME, mode})
+export const switchThemeCreator = (mode: string): switchThemeType => ({type: SWITCH_THEME, mode})

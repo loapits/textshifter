@@ -3,27 +3,28 @@ import { connect } from "react-redux"
 import { Input } from "./Input"
 import { saveAs } from 'file-saver'
 import { enterTextCreator, copyToClipboardCreator } from "../../state/edit-text-reducer"
-import { InputContainerTypes } from '../../interfaces'
+import { InputContainerInterface } from '../../interfaces/input_interface'
+import { Dispatch } from 'redux'
+import { ActionsTypes } from '../../types/edit_types'
 
-class InputContainer extends React.Component<InputContainerTypes> {
+class InputContainer extends React.Component<InputContainerInterface> {
   saveFileText = () => {
     const blob = new Blob([this.props.text], {type: "text/plain;charset=utf-8"})
     saveAs(blob, Math.random().toString(36).substring(1) + '.txt')
   }
 
-  enterText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  enteredText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     let text = event.target.value
-    this.props.enterText(text)
+    this.props.enteredText(text)
   }
-  
+
   render() {
     return (
-      <Input 
-        edit={this.props.edit}
+      <Input
         text={this.props.text}
-        copied={this.props.copied}
+        enterText={this.props.enterText}
         copyToClipboard={this.props.copyToClipboard}
-        enterText={this.enterText}
+        enteredText={this.enteredText}
         saveFileText={this.saveFileText}
       />
     )
@@ -32,12 +33,13 @@ class InputContainer extends React.Component<InputContainerTypes> {
 
 const mapStateToProps = (state: any) => ({
   edit: state.edit,
+  enterText: state.edit.enterText,
   text: state.edit.editedText,
   copied: state.edit.copied
 })
 
-const mapDispatchToProps = (dispatch: any) => ({
-  enterText: (text: string) => {
+const mapDispatchToProps = (dispatch: Dispatch<ActionsTypes>) => ({
+  enteredText: (text: string) => {
     let action = enterTextCreator(text)
     dispatch(action)
   },

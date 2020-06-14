@@ -1,10 +1,13 @@
-const SWITCH_REGISTER = 'SWITCH_REGISTER'
+import {switchRegisterType, ActionsTypes } from "../types/logo_types"
+export const SWITCH_REGISTER = 'SWITCH_REGISTER'
 
-const initialState: object = {
-  logotext: 'Textshifter'
+const initialState = {
+  logotext: 'Textshifter' as string
 }
 
-export const logoReducer = (state = initialState, action: any): object => {
+export type logoInitialTypes = typeof initialState
+
+export const logoReducer = (state = initialState, action: ActionsTypes): logoInitialTypes => {
   switch (action.type) {
     case SWITCH_REGISTER: {
       return {
@@ -17,8 +20,4 @@ export const logoReducer = (state = initialState, action: any): object => {
   }
 }
 
-export const switchRegisterCreator = (logotext: string): object => ({type: SWITCH_REGISTER, logotext})
-
-// export const switchRegisterThunkCreator = (text: string) => async (dispatch: any) => {
-//     dispatch(switchRegisterCreator(text.toUpperCase()))
-// }
+export const switchRegisterCreator = (logotext: string): switchRegisterType => ({type: SWITCH_REGISTER, logotext})

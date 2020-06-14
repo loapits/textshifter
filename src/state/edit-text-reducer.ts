@@ -1,22 +1,25 @@
 import letters from './letters.json'
-const INPUT_TEXT = 'INPUT_TEXT'
-const UPPER_CASE = 'UPPER_CASE'
-const LOWER_CASE = 'LOWER_CASE'
-const FIRST_TITLE = 'FIRST_TITLE'
-const REGISTER_INVRESION = 'REGISTER_INVRESION'
-const AS_SENTENCE = 'AS_SENTENCE'
-const START_AN_UPPER_CASE = 'START_AN_UPPER_CASE'
-const REPLASE_TEXT = 'REPLASE_TEXT'
-const SET_COPY_CLIPBOARD = 'SET_COPY_CLIPBOARD'
+import { enterTextType, upperCaseType, lowerCaseType, firstTitleType, registerInversionType, startAnUpperCaseType, asSentenceType, replaceTextType, copyToClipboardType, ActionsTypes } from '../types/edit_types'
+export const INPUT_TEXT = 'INPUT_TEXT'
+export const UPPER_CASE = 'UPPER_CASE'
+export const LOWER_CASE = 'LOWER_CASE'
+export const FIRST_TITLE = 'FIRST_TITLE'
+export const REGISTER_INVRESION = 'REGISTER_INVRESION'
+export const AS_SENTENCE = 'AS_SENTENCE'
+export const START_AN_UPPER_CASE = 'START_AN_UPPER_CASE'
+export const REPLASE_TEXT = 'REPLASE_TEXT'
+export const SET_COPY_CLIPBOARD = 'SET_COPY_CLIPBOARD'
 
-const initialState: object = {
+const initialState = {
   enterText: '',
   editedText: '',
-  replacer: letters.replacer,
-  copied: false,
+  replacer: letters.replacer as object,
+  copied: false
 }
 
-export const editTextReducer = (state = initialState, action: any): object => {
+export type editInitialTypes = typeof initialState
+
+export const editTextReducer = (state = initialState, action: ActionsTypes): editInitialTypes => {
   switch (action.type) {
     case INPUT_TEXT: {
       return {
@@ -78,47 +81,47 @@ export const editTextReducer = (state = initialState, action: any): object => {
   }
 }
 
-export const enterTextCreator = (text: string): object => ({
+export const enterTextCreator = (text: string): enterTextType => ({
   type: INPUT_TEXT,
   enterText: text
 })
 
-export const upperCaseCreator = (text: string): object => ({
+export const upperCaseCreator = (text: string): upperCaseType => ({
   type: UPPER_CASE,
   editedText: text
 })
 
-export const lowerCaseCreator = (text: string): object => ({
+export const lowerCaseCreator = (text: string): lowerCaseType => ({
   type: LOWER_CASE,
   editedText: text
 })
 
-export const firstTitleCreator = (text: string): object => ({
+export const firstTitleCreator = (text: string): firstTitleType => ({
   type: FIRST_TITLE,
   editedText: text
 })
 
-export const registerInversionCreator = (text: string): object => ({
+export const registerInversionCreator = (text: string): registerInversionType => ({
   type: REGISTER_INVRESION,
   editedText: text
 })
 
-export const startAnUpperCaseCreator = (text: string): object => ({
+export const startAnUpperCaseCreator = (text: string): startAnUpperCaseType => ({
   type: START_AN_UPPER_CASE,
   editedText: text
 })
 
-export const asSentenceCreator = (text: string): object => ({
+export const asSentenceCreator = (text: string): asSentenceType => ({
   type: AS_SENTENCE,
   editedText: text
 })
 
-export const replaceTextCreator = (text: string): object => ({
+export const replaceTextCreator = (text: string): replaceTextType => ({
   type: REPLASE_TEXT,
   editedText: text
 })
 
-export const copyToClipboardCreator = (copied: boolean): object => ({
+export const copyToClipboardCreator = (copied: boolean): copyToClipboardType => ({
   type: SET_COPY_CLIPBOARD, 
   copied: copied
 })

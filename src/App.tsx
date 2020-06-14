@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import Buttons from './components/buttons/Buttons-Container'
 import Input from './components/input/InputContainer'
 import HeaderContainer from './components/header/Header-Container'
+import './style/index.scss'
 import { lightTheme, darkTheme } from './theme'
 import { GlobalStyles } from './global_style'
 import { ThemeProvider } from 'styled-components'
-import './style/index.scss'
 import { Footer } from './components/footer/Footer'
-import { AppTypes } from './interfaces'
+import { AppInterface } from './interfaces/app_interface'
 
-export const App: React.FC<AppTypes> = ({mode, switchTheme}) => {
+export const App: React.FC<AppInterface> = ({mode, switchTheme}) => {
 
   const [theme, setTheme] = useState(mode)
 
