@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Textshifter/precache-manifest.7ceb05267a6dd8348e00b82ce7ac76e2.js"
+  "/Textshifter/precache-manifest.8de2b7a9bcf02bb58f810540c18ae226.js"
 );
 
 self.addEventListener('message', (event) => {
