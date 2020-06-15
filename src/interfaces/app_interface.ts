@@ -1,9 +1,9 @@
-export interface AppContainerInterface {
+export interface IAppContainer {
   mode: string
   switchTheme: (mode: string) => void
 }
 
-export interface AppInterface {
+export interface IApp {
   mode: string
   switchTheme: () => void
 }

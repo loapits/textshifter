@@ -1,13 +1,13 @@
-export interface HeaderContainerInterface {
+export interface IHeaderContainer {
   logotext: string
   toggleTheme: () => void
 }
 
-export interface HeaderInterface {
-  toggleTheme: () => void
+export interface IHeader {
   logotext: string
+  toggleTheme: () => void
 }
 
-export interface LogoInterface {
+export interface ILogo {
   logotext: string
 }

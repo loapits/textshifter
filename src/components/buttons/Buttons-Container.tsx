@@ -2,12 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Buttons } from './Buttons'
 import { upperCaseCreator, lowerCaseCreator, firstTitleCreator, registerInversionCreator, startAnUpperCaseCreator, asSentenceCreator, replaceTextCreator } from '../../state/edit-text-reducer'
-import { ButtonContainerInterface } from '../../interfaces/buttons_interface'
+import { IButtonContainer } from '../../interfaces/buttons_interface'
 import { stateType } from '../../types/state_type'
 import { Dispatch } from 'redux'
 import { ActionsTypes } from '../../types/edit_types'
 
-class ButtonsContainer extends React.Component<ButtonContainerInterface> {
+export class ButtonsContainer extends React.Component<IButtonContainer> {
   textUpperCase = () => {
     const textEdit = this.props.text
     if (textEdit) {

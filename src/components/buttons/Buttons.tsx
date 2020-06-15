@@ -1,8 +1,8 @@
 import React from 'react'
 import style from '../../style/button.module.scss'
-import { ButtonInterface } from '../../interfaces/buttons_interface'
+import { IButton } from '../../interfaces/buttons_interface'
 
-export const Buttons: React.FC<ButtonInterface> = (props) => (
+export const Buttons: React.FC<IButton> = (props) => (
   <div className={`button ${style.buttons}`}>
     <button onClick={props.textUpperCase}>Upper case</button>
     <button onClick={props.textLowerCase}>Lower case</button>

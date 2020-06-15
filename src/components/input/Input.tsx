@@ -1,9 +1,9 @@
 import React from 'react'
 import style from '../../style/input.module.scss'
 import CopyToClipboard from 'react-copy-to-clipboard'
-import { InputInterface } from '../../interfaces/input_interface'
+import { IInput } from '../../interfaces/input_interface'
 
-export const Input: React.FC<InputInterface> = ({text, enterText, copyToClipboard, enteredText, saveFileText}) => (
+export const Input: React.FC<IInput> = ({text, enterText, copyToClipboard, enteredText, saveFileText}) => (
   <main id="main" className={style.textarea}>
     <>
       <textarea value={enterText || ''} onChange={enteredText} placeholder="Enter your text"></textarea>

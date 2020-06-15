@@ -1,4 +1,4 @@
-export interface ButtonContainerInterface {
+export interface IButtonContainer {
   text: string
   upperCase: (text: string) => void
   lowerCase: (text: string) => void
@@ -10,7 +10,7 @@ export interface ButtonContainerInterface {
   replaceText: (text: string) => void
 }
 
-export interface ButtonInterface {
+export interface IButton {
   textUpperCase: () => void
   textLowerCase: () => void
   firstTitle: () => void

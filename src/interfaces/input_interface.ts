@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
 
-export interface InputContainerInterface {
+export interface IInputContainer {
   edit: object
   text: string
   copied: boolean
@@ -9,7 +9,7 @@ export interface InputContainerInterface {
   enteredText: (text: string) => void
 }
 
-export interface InputInterface {
+export interface IInput {
   text: string
   enterText: string
   copyToClipboard: () => void

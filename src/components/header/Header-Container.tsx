@@ -1,10 +1,10 @@
 import React from "react"
 import { connect } from "react-redux"
 import { Header } from "./Header"
-import { HeaderContainerInterface } from "../../interfaces/header_interface"
+import { IHeaderContainer } from "../../interfaces/header_interface"
 import { stateType } from "../../types/state_type"
 
-export class HeaderContainer extends React.Component<HeaderContainerInterface> {
+export class HeaderContainer extends React.Component<IHeaderContainer> {
   render() {
     return(
       <Header

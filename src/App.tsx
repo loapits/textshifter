@@ -7,9 +7,9 @@ import { lightTheme, darkTheme } from './theme'
 import { GlobalStyles } from './global_style'
 import { ThemeProvider } from 'styled-components'
 import { Footer } from './components/footer/Footer'
-import { AppInterface } from './interfaces/app_interface'
+import { IApp } from './interfaces/app_interface'
 
-export const App: React.FC<AppInterface> = ({mode, switchTheme}) => {
+export const App: React.FC<IApp> = ({mode, switchTheme}) => {
 
   const [theme, setTheme] = useState(mode)
 
