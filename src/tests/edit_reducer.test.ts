@@ -2,7 +2,7 @@ import { editTextReducer } from '../state/edit-text-reducer'
 import letters from '../state/letters.json'
 import { UPPER_CASE, LOWER_CASE, FIRST_TITLE, REGISTER_INVRESION, START_AN_UPPER_CASE, AS_SENTENCE, REPLASE_TEXT, SET_COPY_CLIPBOARD, INPUT_TEXT } from '../state/types'
 
-describe('edit reducer', () => {
+describe('Edit reducer:', () => {
   const state = {
     enterText: '',
     editedText: '',
@@ -10,12 +10,12 @@ describe('edit reducer', () => {
     copied: false
   }
 
-  it('check that state initialized', () => {
+  it('Check that state initialized', () => {
     const action: any = {}
     expect(editTextReducer(undefined, action)).toEqual(state)
   })
 
-  it('check that every letter adding to state', () => {
+  it('Check that every letter adding to state', () => {
     const action: any = {
       type: INPUT_TEXT,
       enterText: 'hello'
@@ -33,7 +33,7 @@ describe('edit reducer', () => {
     // expect(newState.enterText).toBe('hello')
   })
 
-  it('adding text to state as uppercase', () => {
+  it('Adding text to state as uppercase', () => {
     const action: any = {
       type: UPPER_CASE,
       editedText: "HELLO"
@@ -47,7 +47,7 @@ describe('edit reducer', () => {
     })
   })
 
-  it('adding text to state as lowercase', () => {
+  it('Adding text to state as lowercase', () => {
     const action: any = {
       type: LOWER_CASE,
       editedText: "hello"
@@ -61,7 +61,7 @@ describe('edit reducer', () => {
     })
   })
 
-  it('adding to state a text which first letter uppercase', () => {
+  it('Adding to state a text which first letter uppercase', () => {
     const action: any = {
       type: FIRST_TITLE,
       editedText: 'Text which was be edited'
@@ -75,7 +75,7 @@ describe('edit reducer', () => {
     })
   })
 
-  it('adding to state a text in which register inverted', () => {
+  it('Adding to state a text in which register inverted', () => {
     const action: any = {
       type: REGISTER_INVRESION,
       editedText: 'heLllo',
@@ -89,7 +89,7 @@ describe('edit reducer', () => {
     })
   })
 
-  it('adding to state a text in which first letter of every word uppercase', () => {
+  it('Adding to state a text in which first letter of every word uppercase', () => {
     const action: any = {
       type: START_AN_UPPER_CASE,
       editedText: 'Hello World'
@@ -103,7 +103,7 @@ describe('edit reducer', () => {
     })
   })
 
-  it('adding to state a text in which first letter every sentence will be uppercase', () => {
+  it('Adding to state a text in which first letter every sentence will be uppercase', () => {
     const action: any = {
       type: AS_SENTENCE,
       editedText: 'Hello world! New coder'
@@ -117,7 +117,7 @@ describe('edit reducer', () => {
     })
   })
 
-  it('adding to state a text in which letters should be replaced eng on ru or ru on eng', () => {
+  it('Adding to state a text in which letters should be replaced eng on ru or ru on eng', () => {
     const action: any = {
       type: REPLASE_TEXT,
       editedText: 'Ghbdtn'
@@ -131,7 +131,7 @@ describe('edit reducer', () => {
     })
   })
 
-  it('after click on button property copied should be changed on true', () => {
+  it('After click on button property copied should be changed on true', () => {
     const action: any = {
       type: SET_COPY_CLIPBOARD,
       copied: true

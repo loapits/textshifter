@@ -1,17 +1,17 @@
 import { switchThemeReducer } from "../state/switch-theme-reducer"
 import { SWITCH_THEME } from "../state/types"
 
-describe('theme reducer', () => {
+describe('Theme reducer:', () => {
   const state = {
     mode: 'light'
   }
 
-  it('check that state initialized', () => {
+  it('Check that state initialized', () => {
     const action: any = {}
     expect(switchThemeReducer(undefined, action)).toEqual(state)
   })
   
-  it('checks that the mode is reversed', () => {
+  it('Checks that the mode is reversed', () => {
     const action: any = {
       type: SWITCH_THEME,
       mode: 'dark'

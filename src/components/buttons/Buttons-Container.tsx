@@ -91,7 +91,7 @@ export class ButtonsContainer extends React.Component<IButtonContainer> {
     const text = this.replace(replacer,textEdit, '')
     this.props.replaceText(text)
   }
-
+  
   render() {
     return (
       <Buttons
@@ -110,7 +110,7 @@ export class ButtonsContainer extends React.Component<IButtonContainer> {
 
 const mapStateToProps = (state: stateType) => ({
   text: state.edit.enterText.trim(),
-  replacer: state.edit.replacer,
+  replacer: state.edit.replacer
 })
 
 const mapDispatchToProps = (dispatch: Dispatch<ActionsTypes>) => ({
