@@ -7,91 +7,154 @@ import { stateType } from '../../types/state_type'
 import { Dispatch } from 'redux'
 import { ActionsTypes } from '../../types/edit_types'
 
+/**
+ * The component that is responsible for the buttons.
+ * 
+ * @method `textUpperCase()` convertin enterText in uppercase.
+ * @method `textLowerCase()` convertin enterText in lowercase.
+ * @method `firstTitle()` convertin first letter of enterText in uppercase.
+ * @method `inverseRegister()` invert every letter on the reverse case.
+ * @method `startAnUpperCase()` convertin every letter on uppercase.
+ * @method `asSentence()` convertin first letter of every sentence in uppercase.
+ * @method `replaceTextRu()` if the text in Eng that convert every letter of sentence on Ru.
+ * @method `replaceTextEng()` if the text in Ru that convert every letter of sentence on Eng.
+ * @method `render()` return child component.
+ */
 export class ButtonsContainer extends React.Component<IButtonContainer> {
+  /** `enterText` - text which need edit. */
   textUpperCase = () => {
-    const textEdit = this.props.text
-    if (textEdit) {
-      const text = textEdit.toUpperCase()
+    const enterText = this.props.enterText
+    if (enterText) {
+      const text = enterText.toUpperCase()
       this.props.upperCase(text)
     }
   }
 
+  /** `enterText` - text which need edit. */ 
   textLowerCase = () => {
-    const textEdit = this.props.text
-    if (textEdit) {
-      const text = textEdit.toLowerCase()
+    const enterText = this.props.enterText
+    if (enterText) {
+      const text = enterText.toLowerCase()
       this.props.lowerCase(text)
     }
   }
 
+  /** `enterText` - text which need edit. */
   firstTitle = () => {
-    const textEdit = this.props.text
-    if (textEdit) {
-      const text = textEdit[0].toUpperCase() + textEdit.slice(1) 
+    const enterText = this.props.enterText
+    if (enterText) {
+      const text = enterText[0].toUpperCase() + enterText.slice(1) 
       this.props.firstTitle(text)
     }
   }
 
+  /**
+   * Checked, if `enterText` is defined, then the first letter 
+   * to uppercase and the rest to lowercase.
+   * 
+   * `enterText` - text which need edit.
+   */
   inverseRegister = () => {
-    const textEdit = this.props.text
-    if (textEdit) {
+    const enterText = this.props.enterText
+    if (enterText) {
       let text = ''
-      for (let i = 0; i < textEdit.length; i++) {
-        textEdit[i].toUpperCase() === textEdit[i] 
-          ? text += textEdit[i].toLowerCase()
-          : text += textEdit[i].toUpperCase()
+      for (let i = 0; i < enterText.length; i++) {
+        enterText[i].toUpperCase() === enterText[i] 
+          ? text += enterText[i].toLowerCase()
+          : text += enterText[i].toUpperCase()
       }     
       this.props.inverseRegister(text)
     }
   }
 
+  /**
+   * If `enterText` is defined, then the first letter converted to uppercase.
+   * 
+   * `enterText` - text which need edit.
+   */
   startAnUpperCase = () => {
-    const textEdit = this.props.text
-    if (textEdit) {
-      const text = textEdit.replace(/(^|\s)\S/g, txt => txt.toUpperCase())
+    const enterText = this.props.enterText
+    if (enterText) {
+      const text = enterText.replace(/(^|\s)\S/g, txt => txt.toUpperCase())
       this.props.startAnUpperCase(text)
     }
   }
 
+  /** 
+   * If `enterText` is defined, then the first letter converted to uppercase.
+   * 
+   * `enterText` - text which need edit. 
+   */
   asSentence = () => {
-    const textEdit = this.props.text
-    if (textEdit) {
-      const text = textEdit[0].toUpperCase() + (textEdit.replace(/(^|[?!.;]\s[\p{Alpha}\p{M}\p{Nd}\p{Pc}\p{Join_C}])/gu, txt => txt.toUpperCase())).slice(1)
+    const enterText = this.props.enterText
+    if (enterText) {
+      const text = enterText[0].toUpperCase() + (enterText.replace(/(^|[?!.;]\s[\p{Alpha}\p{M}\p{Nd}\p{Pc}\p{Join_C}])/gu, txt => txt.toUpperCase())).slice(1)
       this.props.asSentence(text)
     }
   }
 
-  protected replace = (replacer: {[key: string]: string}, textEdit: string, replace: string): string => {
-    for (let i = 0; i < textEdit.length; i++) {                        
-      if( replacer[textEdit[i].toLowerCase()] !== undefined ) {
-        if (textEdit[i] === textEdit[i].toLowerCase()) {
-          replace = replacer[ textEdit[i].toLowerCase() ]    
-        } else if (textEdit[i] === textEdit[i].toUpperCase()) {
-          replace = replacer[ textEdit[i].toLowerCase() ].toUpperCase();
+  
+  /** 
+   * Used for implement methods `replaceTextRu()` and `replaceTextEnd()` which return edited text.
+   * 
+   * @param replacer object that contains values for replacing from letters of one language to letters of another.
+   * @param enterText text which need edit.
+   * @param replace value for saving register in replace text, which is a replaced text, and used in time checking the register.
+   * @returns `enterText`, it the text which was edited.
+   */
+  protected replace = (replacer: {[key: string]: string}, enterText: string, replace: string): string => {
+    for (let i = 0; i < enterText.length; i++) {                        
+      if( replacer[enterText[i].toLowerCase()] !== undefined ) {
+        if (enterText[i] === enterText[i].toLowerCase()) {
+          replace = replacer[enterText[i].toLowerCase()]    
+        } else if (enterText[i] === enterText[i].toUpperCase()) {
+          replace = replacer[enterText[i].toLowerCase()].toUpperCase();
         }
-        textEdit = textEdit.replace(textEdit[i], replace)
+        enterText = enterText.replace(enterText[i], replace)        
       }
     }
-    return textEdit
+    return enterText
   }
 
+  /**
+   * Method which replaces English letters in Russian letters.
+   * Implementing with help a method `replace()`.
+   * 
+   * `enterText` - variable which contains in yourself method `replace()`.
+   */
   replaceTextRu = () => {      
-    const text = this.replace(this.props.replacer, this.props.text, '')
+    const text = this.replace(this.props.replacer, this.props.enterText, '')
     this.props.replaceText(text)
   }
 
+  /**
+   * Does the same as in the method `replaceTextRu()` but reversing places keys on algorithm:
+   * method Object.keys take a `replacer` and iterates over it, reverting object with
+   * invert key and value. 
+   * Method which replaces Russian letters in English letters.
+   * Implementing with help a method `replace()`.
+   * 
+   * `enterText` - text which need edit.
+   * 
+   * `replacer` - object that contains values for replacing from letters of one language to letters of another.
+   * 
+   * `enterText` - variable which contains in yourself method `replace()`.
+   */
   replaceTextEng = () => {      
-    const textEdit = this.props.text
+    const enterText = this.props.enterText
     const replacer: {[key: string]: string} = this.props.replacer
 
     Object.keys(replacer).forEach((key: string): string => {
       return replacer[replacer[key]] = key
     })
 
-    const text = this.replace(replacer,textEdit, '')
+    const text = this.replace(replacer, enterText, '')
     this.props.replaceText(text)
   }
   
+  /**
+   * Return Button presentatin component, which take in props methods and variables.
+   */
   render() {
     return (
       <Buttons
@@ -108,11 +171,27 @@ export class ButtonsContainer extends React.Component<IButtonContainer> {
   } 
 }
 
+/**
+ * Function, which takes data from state and gives to Button container component.
+ * 
+ * @param state total state from which taking values `text` and `replacer`.
+ * 
+ * `enterText` - entered text in which spaces at the edges are removed.
+ * 
+ * `replacer` - object that contains values for replacing from letters of one language to letters of another.
+ */
 const mapStateToProps = (state: stateType) => ({
-  text: state.edit.enterText.trim(),
+  enterText: state.edit.enterText.trim(),
   replacer: state.edit.replacer
 })
 
+/**
+ * Function with which help can be change state.
+ * 
+ * @param dispatch used for informing a store about changes.
+  * 
+ * It has callbacks for changing. 
+ */
 const mapDispatchToProps = (dispatch: Dispatch<ActionsTypes>) => ({
   upperCase: (text: string) => {
     const action = upperCaseCreator(text)

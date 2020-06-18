@@ -1,6 +1,6 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { Footer } from '../../components/footer/Footer'
+import { Footer } from '../components/footer/Footer'
 
 describe('Footer presentation container:', () => {
   const footer = create(<Footer />)

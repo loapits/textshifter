@@ -1,8 +1,8 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { Header } from '../../components/header/Header'
+import { Header } from '../components/header/Header'
 import { BrowserRouter, NavLink } from 'react-router-dom'
-import { Logo } from '../../components/header/Logo'
+import { Logo } from '../components/header/Logo'
 
 describe('Logo presentation container:', () => {
   const props = {
@@ -212,6 +212,10 @@ describe('Header presentation container:', () => {
         expect(button.props.className).toContain('theme')
         expect(button.props.onClick).toBe(newProps.logo.toggleTheme)
       })
+    })
+
+    it('If click, mode must be swich', () => {
+      expect(button.props.onClick).toBe(newProps.logo.toggleTheme)
     })
   })
 })

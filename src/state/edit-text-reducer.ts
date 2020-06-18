@@ -2,6 +2,14 @@ import letters from './letters.json'
 import { enterTextType, upperCaseType, lowerCaseType, firstTitleType, registerInversionType, startAnUpperCaseType, asSentenceType, replaceTextType, copyToClipboardType, ActionsTypes } from '../types/edit_types'
 import { INPUT_TEXT, UPPER_CASE, LOWER_CASE, FIRST_TITLE, REGISTER_INVRESION, START_AN_UPPER_CASE, AS_SENTENCE, REPLASE_TEXT, SET_COPY_CLIPBOARD } from './types'
 
+/**
+ * Starting state of the application.
+ * 
+ * `enterText` - text which was entered.
+ * `editedText` - text which was edited.
+ * `replacer` - object that contains values for replacing from letters of one language to letters of another.
+ * `copied` - boolean value, which becomes true if click on copyToClipboardButton button.
+ */
 const initialState = {
   enterText: '',
   editedText: '',
@@ -9,8 +17,14 @@ const initialState = {
   copied: false
 }
 
+/**
+ * Returns types of data in the state.
+ */
 export type editInitialTypes = typeof initialState
 
+/**
+ * 
+ */
 export const editTextReducer = (state = initialState, action: ActionsTypes): editInitialTypes => {
   switch (action.type) {
     case INPUT_TEXT: {
@@ -64,7 +78,7 @@ export const editTextReducer = (state = initialState, action: ActionsTypes): edi
     case SET_COPY_CLIPBOARD: {
       return {
         ...state,
-        copied: true
+        copied: action.copied
       }
     }
 

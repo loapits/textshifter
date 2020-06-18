@@ -1,5 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
+/**
+ * Global styles that apply to the entire application.
+ * @param theme take from theme.ts
+ */
 export const GlobalStyles = createGlobalStyle<any>`
   *,
   *::after,
@@ -43,6 +47,9 @@ export const GlobalStyles = createGlobalStyle<any>`
   }
   .clipboard{
     background: url(${({ theme }) => theme.clipboard}) no-repeat center top/cover;
+  }
+  .clipboardSucc{
+    background: url(${({ theme }) => theme.clipboardSucc}) no-repeat center top/cover;
   }
   .download{
     background: url(${({ theme }) => theme.downloadBtn}) no-repeat center top/cover;

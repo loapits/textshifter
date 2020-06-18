@@ -9,8 +9,22 @@ import { ThemeProvider } from 'styled-components'
 import { Footer } from './components/footer/Footer'
 import { IApp } from './interfaces/app_interface'
 
+/**
+ * App presentation component. In here using a hook useState for switching theme mode.
+ * 
+ * @param mode it a theme mode(dark or light).
+ * @param switchTheme a callback with which help to can switch the theme.
+ * @returns all components in application.
+ */
 export const App: React.FC<IApp> = ({mode, switchTheme}) => {
 
+  /**
+   * Hook useState.
+   * 
+   * `theme` - it mode of theme which was set.
+   * 
+   * `setTheme` - function with which help to can switch mode.
+   */
   const [theme, setTheme] = useState(mode)
 
   const toggleTheme = () => {

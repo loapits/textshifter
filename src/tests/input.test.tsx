@@ -1,12 +1,13 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { Input } from '../../components/input/Input'
+import { Input } from '../components/input/Input'
 import CopyToClipboard from 'react-copy-to-clipboard'
 
 describe('Input presentation component:', () => {
   const props = {
     edit: {
-      text: '',
+      copied: false,
+      editedText: '',
       enterText: '', 
       copyToClipboard: () => {}, 
       enteredText: () => {}, 
@@ -19,7 +20,8 @@ describe('Input presentation component:', () => {
       ...props, 
       edit: {
         ...props.edit,
-        text: '',
+        copied: false,
+        editedText: '',
         enterText: '', 
         copyToClipboard: () => {}, 
         enteredText: () => {}, 
@@ -69,7 +71,8 @@ describe('Input presentation component:', () => {
       ...props, 
       edit: {
         ...props.edit,
-        text: '',
+        copied: false,
+        editedText: '',
         enterText: '', 
         copyToClipboard: () => {}, 
         enteredText: () => {}, 
@@ -103,7 +106,8 @@ describe('Input presentation component:', () => {
       ...props, 
       edit: {
         ...props.edit,
-        text: '',
+        copied: false,
+        editedText: '',
         enterText: '', 
         copyToClipboard: () => {}, 
         enteredText: () => {}, 
@@ -129,7 +133,7 @@ describe('Input presentation component:', () => {
 
       it('Props must be correctly', () => {
         expect(textarea.props.readOnly).toBeDefined()
-        expect(textarea.props.value).toBe(newProps.edit.text)
+        expect(textarea.props.value).toBe(newProps.edit.editedText)
         expect(textarea.props.placeholder).toBe('Your result')
       })
     })
@@ -140,7 +144,8 @@ describe('Input presentation component:', () => {
       ...props, 
       edit: {
         ...props.edit,
-        text: '',
+        copied: false,
+        editedText: '',
         enterText: '', 
         copyToClipboard: () => {}, 
         enteredText: () => {}, 
@@ -154,7 +159,7 @@ describe('Input presentation component:', () => {
       const clipboard = root.findByType(CopyToClipboard)
 
       expect(clipboard.props.onCopy).toBe(newProps.edit.copyToClipboard)
-      expect(clipboard.props.text).toBe(newProps.edit.text)
+      expect(clipboard.props.text).toBe(newProps.edit.editedText)
     })
 
     it('Find the CopyToClipboard tag', () => {

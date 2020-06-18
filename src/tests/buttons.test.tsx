@@ -1,6 +1,6 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { Buttons } from '../../components/buttons/Buttons'
+import { Buttons } from '../components/buttons/Buttons'
 
 describe('Buttons presentation component:', () => {
   const props = {
@@ -61,14 +61,14 @@ describe('Buttons presentation component:', () => {
     it('In first button', () => {
       const button1 = root.findAllByType('button')[0]
 
-      expect(button1.props.children).toBe('Upper case')
+      expect(button1.props.children).toBe('Uppercase')
       expect(button1.props.onClick).toBe(newProps.edit.textUpperCase)
     })
-  
+
     it('In second button', () => {
       const button2 = root.findAllByType('button')[1]
 
-      expect(button2.props.children).toBe('Lower case')
+      expect(button2.props.children).toBe('Lowercase')
       expect(button2.props.onClick).toBe(newProps.edit.textLowerCase)
     })
   
