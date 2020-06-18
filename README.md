@@ -31,10 +31,10 @@ _types_ - typescript types for data in application.</br>
 You can change the theme by clicking on the button in the upper right corner.
 
 **Download**:</br>
-if you click on the left button in the textarea, the file with the changed text will be downloaded
+if you click on the left button in the textarea, the file with the changed text will be downloaded.
 
 **Copy to clipboard**:</br>
-if you click on the right button in the textarea, the changed text will be copied to the clipboard
+if you click on the right button in the textarea, the changed text will be copied to the clipboard.
   
 **Buttons**: 
   * _Uppercase_: Converting text to the upper register.
