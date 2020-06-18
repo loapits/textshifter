@@ -51,11 +51,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "predeploy": "npm run test build",
+    "predeploy": "npm run build",
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage",
     "deploy": "gh-pages -d build",
-    "postdeploy": "source-map-explorer 'build/static/js/*.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
