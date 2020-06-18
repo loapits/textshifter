@@ -23,7 +23,9 @@ _interfaces_ - location all the icons.</br>
 _types_ - typescript types for data in application.</br>
 
 ### Functional:
-**Switch theme**: If click on the button in the upper right corner, you can switch theme.
+**Switch theme**: 
+
+If click on the button in the upper right corner, you can switch theme.
 
 **Buttons**: 
   * _Uppercase_: Converting text to the upper register.
@@ -35,5 +37,6 @@ _types_ - typescript types for data in application.</br>
   * _Eng → Ru_: If letter English converten in the Russian.
   * _Ru → Eng_: If letter Russian converten in the English.
   
-  ### PWA: 
+  ** PWA: 
+  
   Also can install a PWA.
