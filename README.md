@@ -23,9 +23,17 @@ _interfaces_ - location all the icons.</br>
 _types_ - typescript types for data in application.</br>
 
 ### Functional:
-**Switch theme**:</br>
-If click on the button in the upper right corner, you can switch theme.
 
+**Switch theme**:</br>
+If click on <img src="https://github.com/loapits/Textshifter/blob/master/src/public/sun.svg" width="14px" height="14px" /> or <img src="https://github.com/loapits/Textshifter/blob/master/src/public/moon.svg" width="14px" height="14px" /> to can switch theme.
+
+**Download**:</br>
+If click on <img src="https://github.com/loapits/Textshifter/blob/master/src/public/direct-download.svg" width="14px" height="14px" /> to can download .txt file with edited text.
+
+**Copy to clipboard**:</br>
+If click on <img src="https://github.com/loapits/Textshifter/blob/master/src/public/clipboard.svg" width="14px" height="14px" />
+  to can copy the edited text to clipboard.
+  
 **Buttons**: 
   * _Uppercase_: Converting text to the upper register.
   * _Lowercase_: Converting text to the lower register.
