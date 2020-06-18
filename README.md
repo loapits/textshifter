@@ -1,7 +1,10 @@
 # Textshifter <img src="https://raw.githubusercontent.com/loapits/Textshifter/master/public/favicon.png" width="30px" height="30px"/>
 Project create for editing text. Changing register and literation. Have dark and light mode
 
-### Structure src frolder in the project:
+### Tools:
+React, Redux, TypeScript.
+
+### Structure src folder in the project:
 * [components](https://github.com/loapits/Textshifter/tree/master/src/components)   
   * [header](https://github.com/loapits/Textshifter/tree/master/src/components/header)
   * [buttons](https://github.com/loapits/Textshifter/tree/master/src/components/buttons)
