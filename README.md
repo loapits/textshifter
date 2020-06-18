@@ -36,5 +36,5 @@ If click on the button in the upper right corner, you can switch theme.
   * _Eng → Ru_: If letter English converten in the Russian.
   * _Ru → Eng_: If letter Russian converten in the English.
   
-  ** PWA**:</br>
+  **PWA**:</br>
   Also can install a PWA.
