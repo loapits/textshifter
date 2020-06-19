@@ -2,7 +2,7 @@
 Project create for editing text. Changing register and literation. Have dark and light mode
 
 ### Tools:
-React, Redux, TypeScript.
+React, Redux, TypeScript, Jest.
 
 ### Structure src folder in the project:
 * [components](https://github.com/loapits/Textshifter/tree/master/src/components)   
