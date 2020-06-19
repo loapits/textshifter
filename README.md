@@ -1,7 +1,10 @@
 # Textshifter <img src="https://raw.githubusercontent.com/loapits/Textshifter/master/public/favicon.png" width="30px" height="30px"/>
 Project create for editing text. Changing register and literation. Have dark and light mode
 
-### Structure src frolder in the project:
+### Tools:
+React, Redux, TypeScript.
+
+### Structure src folder in the project:
 * [components](https://github.com/loapits/Textshifter/tree/master/src/components)   
   * [header](https://github.com/loapits/Textshifter/tree/master/src/components/header)
   * [buttons](https://github.com/loapits/Textshifter/tree/master/src/components/buttons)
@@ -25,14 +28,13 @@ _types_ - typescript types for data in application.</br>
 ### Functional:
 
 **Switch theme**:</br>
-If click on <img src="https://github.com/loapits/Textshifter/blob/master/src/public/sun.svg" width="14px" height="14px" /> or <img src="https://github.com/loapits/Textshifter/blob/master/src/public/moon.svg" width="14px" height="14px" /> to can switch theme.
+You can change the theme by clicking on the button in the upper right corner.
 
 **Download**:</br>
-If click on <img src="https://github.com/loapits/Textshifter/blob/master/src/public/direct-download.svg" width="14px" height="14px" /> to can download .txt file with edited text.
+if you click on the left button in the textarea, the file with the changed text will be downloaded.
 
 **Copy to clipboard**:</br>
-If click on <img src="https://github.com/loapits/Textshifter/blob/master/src/public/clipboard.svg" width="14px" height="14px" />
-  to can copy the edited text to clipboard.
+if you click on the right button in the textarea, the changed text will be copied to the clipboard.
   
 **Buttons**: 
   * _Uppercase_: Converting text to the upper register.
