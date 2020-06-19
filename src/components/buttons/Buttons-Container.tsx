@@ -99,7 +99,7 @@ export class ButtonsContainer extends React.Component<IButtonContainer> {
    * 
    * @param replacer object that contains values for replacing from letters of one language to letters of another.
    * @param enterText text which need edit.
-   * @param replace value for saving register in replace text, which is a replaced text, and used in time checking the register.
+   * @param replace value for saving register in `replace` text, which is a replaced text, and used in time checking the register.
    * @returns `enterText`, it the text which was edited.
    */
   protected replace = (replacer: {[key: string]: string}, enterText: string, replace: string): string => {

@@ -7,6 +7,11 @@ import { Provider } from 'react-redux'
 import { store } from './state/store'
 import 'normalize.css'
 
+/**
+ * Parent component, from which start rendering application. To Provider
+ * transmitted global store. In a container BrowserRouter transmitted basename, 
+ * which needs for working on hosing.
+ */
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
