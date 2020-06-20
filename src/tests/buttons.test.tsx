@@ -11,8 +11,7 @@ describe('Buttons presentation component:', () => {
       inverseRegister: () => {},
       startAnUpperCase: () => {},
       asSentence: () => {},
-      replaceTextRu: () => {},
-      replaceTextEng: () => {}
+      replaceText: () => {}
     }
   }
 
@@ -27,8 +26,7 @@ describe('Buttons presentation component:', () => {
         inverseRegister: () => {},
         startAnUpperCase: () => {},
         asSentence: () => {},
-        replaceTextRu: () => {},
-        replaceTextEng: () => {}
+        replaceText: () => {}
       }
     }
     const component = create(<Buttons {...newProps.edit}/>) 
@@ -36,7 +34,7 @@ describe('Buttons presentation component:', () => {
     const buttons = root.findAllByType('button')
     
     it('Must be 8 buttons', () => {
-      expect(buttons).toHaveLength(8)
+      expect(buttons).toHaveLength(7)
     })
   })
 
@@ -51,8 +49,7 @@ describe('Buttons presentation component:', () => {
         inverseRegister: () => {},
         startAnUpperCase: () => {},
         asSentence: () => {},
-        replaceTextRu: () => {},
-        replaceTextEng: () => {}
+        replaceText: () => {}
       }
     }
     const component = create(<Buttons {...newProps.edit}/>)
@@ -103,15 +100,8 @@ describe('Buttons presentation component:', () => {
     it('In the seventh button', () => {
       const button7 = root.findAllByType('button')[6]
       
-      expect(button7.props.children).toBe('Eng → Ru')
-      expect(button7.props.onClick).toBe(newProps.edit.replaceTextRu)
-    })
-
-    it('In eighth button', () => {
-      const button8 = root.findAllByType('button')[7]
-
-      expect(button8.props.children).toBe('Ru → Eng')
-      expect(button8.props.onClick).toBe(newProps.edit.replaceTextEng)
+      expect(button7.props.children).toBe('Eng ⇄ Ru')
+      expect(button7.props.onClick).toBe(newProps.edit.replaceText)
     })
   })
 })

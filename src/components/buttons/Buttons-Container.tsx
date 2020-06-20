@@ -16,7 +16,6 @@ import { ActionsTypes } from '../../types/edit_types'
  * @method `inverseRegister()` invert every letter on the reverse case.
  * @method `startAnUpperCase()` convertin every letter on uppercase.
  * @method `asSentence()` convertin first letter of every sentence in uppercase.
- * @method `replaceTextRu()` if the text in Eng that convert every letter of sentence on Ru.
  * @method `replaceTextEng()` if the text in Ru that convert every letter of sentence on Eng.
  * @method `render()` return child component.
  */
@@ -117,21 +116,10 @@ export class ButtonsContainer extends React.Component<IButtonContainer> {
   }
 
   /**
-   * Method which replaces English letters in Russian letters.
-   * Implementing with help a method `replace()`.
-   * 
-   * `enterText` - variable which contains in yourself method `replace()`.
-   */
-  replaceTextRu = () => {      
-    const text = this.replace(this.props.replacer, this.props.enterText, '')
-    this.props.replaceText(text)
-  }
-
-  /**
-   * Does the same as in the method `replaceTextRu()` but reversing places keys on algorithm:
+   * Does the same as in the method `replaceText()` but reversing places keys on algorithm:
    * method Object.keys take a `replacer` and iterates over it, reverting object with
    * invert key and value. 
-   * Method which replaces Russian letters in English letters.
+   * Method which replaces Russian letters in English letters or rev.
    * Implementing with help a method `replace()`.
    * 
    * `enterText` - text which need edit.
@@ -140,7 +128,7 @@ export class ButtonsContainer extends React.Component<IButtonContainer> {
    * 
    * `enterText` - variable which contains in yourself method `replace()`.
    */
-  replaceTextEng = () => {      
+  replaceText = () => {      
     const enterText = this.props.enterText
     const replacer: {[key: string]: string} = this.props.replacer
 
@@ -164,8 +152,7 @@ export class ButtonsContainer extends React.Component<IButtonContainer> {
         inverseRegister={this.inverseRegister}
         startAnUpperCase={this.startAnUpperCase}
         asSentence={this.asSentence}
-        replaceTextEng={this.replaceTextEng}
-        replaceTextRu={this.replaceTextRu}
+        replaceText={this.replaceText}
       />
     )
   } 

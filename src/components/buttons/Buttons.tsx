@@ -14,7 +14,6 @@ export const Buttons: React.FC<IButton> = (props) => (
     <button onClick={props.inverseRegister}>Register Inversion</button>
     <button onClick={props.startAnUpperCase}>Start an upper case</button>
     <button onClick={props.asSentence}>As in the sentence</button>
-    <button onClick={props.replaceTextRu}>Eng → Ru</button>
-    <button onClick={props.replaceTextEng}>Ru → Eng</button>
+    <button onClick={props.replaceText}>Eng ⇄ Ru</button>
   </div>
 )

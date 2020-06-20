@@ -42,6 +42,5 @@ export interface IButton {
   inverseRegister: () => void
   startAnUpperCase: () => void
   asSentence: () => void
-  replaceTextRu: () => void
-  replaceTextEng: () => void
+  replaceText: () => void
 }
