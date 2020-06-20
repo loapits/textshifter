@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Textshifter/static/css/main.1393849c.chunk.css",
-    "main.js": "/Textshifter/static/js/main.9af06a59.chunk.js",
-    "main.js.map": "/Textshifter/static/js/main.9af06a59.chunk.js.map",
+    "main.js": "/Textshifter/static/js/main.86b12f8f.chunk.js",
+    "main.js.map": "/Textshifter/static/js/main.86b12f8f.chunk.js.map",
     "runtime-main.js": "/Textshifter/static/js/runtime-main.88db9dd9.js",
     "runtime-main.js.map": "/Textshifter/static/js/runtime-main.88db9dd9.js.map",
     "static/css/2.764ccc25.chunk.css": "/Textshifter/static/css/2.764ccc25.chunk.css",
     "static/js/2.55e57afc.chunk.js": "/Textshifter/static/js/2.55e57afc.chunk.js",
     "static/js/2.55e57afc.chunk.js.map": "/Textshifter/static/js/2.55e57afc.chunk.js.map",
     "index.html": "/Textshifter/index.html",
-    "precache-manifest.7ab02533a905765c2a6e222ca1adb332.js": "/Textshifter/precache-manifest.7ab02533a905765c2a6e222ca1adb332.js",
+    "precache-manifest.5f792e8bb8c73a1ec50a42f388bbb84d.js": "/Textshifter/precache-manifest.5f792e8bb8c73a1ec50a42f388bbb84d.js",
     "service-worker.js": "/Textshifter/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/Textshifter/static/css/2.764ccc25.chunk.css.map",
     "static/css/main.1393849c.chunk.css.map": "/Textshifter/static/css/main.1393849c.chunk.css.map",
@@ -29,6 +29,6 @@
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.55e57afc.chunk.js",
     "static/css/main.1393849c.chunk.css",
-    "static/js/main.9af06a59.chunk.js"
+    "static/js/main.86b12f8f.chunk.js"
   ]
 }
