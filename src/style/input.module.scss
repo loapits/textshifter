@@ -5,7 +5,7 @@
   gap: 4%;
   width: 100%;
   margin: 30px auto;
-  
+
   textarea{
     display: grid;
     justify-content: center;
@@ -17,10 +17,6 @@
     border-radius: 10px;
     padding: 20px;
     margin: 0 auto;
-
-    &:focus{
-      outline: 2px solid;
-    }
   }
   .resultInput{
     display: inline-block;

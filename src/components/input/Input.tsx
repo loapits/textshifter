@@ -16,11 +16,11 @@ import { IInput } from '../../interfaces/input_interface'
  */
 export const Input: React.FC<IInput> = ({copied, editedText, enterText, copyToClipboard, enteredText, saveFileText}) => (
   <main id="main" className={style.textarea}>
-    <label>hi
+    <label>
       <textarea value={enterText || ''} onChange={enteredText} placeholder="Enter your text"></textarea>
     </label>
     <div className={style.resultInput}>
-      <label>hi
+      <label>
         <textarea value={editedText} readOnly placeholder="Your result"></textarea>
       </label>
       <CopyToClipboard onCopy={copyToClipboard} text={editedText}>
