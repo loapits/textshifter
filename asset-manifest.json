@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Textshifter/static/css/main.d3102dbe.chunk.css",
+    "main.css": "/Textshifter/static/css/main.b811ad46.chunk.css",
     "main.js": "/Textshifter/static/js/main.062c02b1.chunk.js",
     "main.js.map": "/Textshifter/static/js/main.062c02b1.chunk.js.map",
     "runtime-main.js": "/Textshifter/static/js/runtime-main.88db9dd9.js",
@@ -9,10 +9,10 @@
     "static/js/2.55e57afc.chunk.js": "/Textshifter/static/js/2.55e57afc.chunk.js",
     "static/js/2.55e57afc.chunk.js.map": "/Textshifter/static/js/2.55e57afc.chunk.js.map",
     "index.html": "/Textshifter/index.html",
-    "precache-manifest.f21d2c3099ad073e1daba5166a6d435d.js": "/Textshifter/precache-manifest.f21d2c3099ad073e1daba5166a6d435d.js",
+    "precache-manifest.d25bb6c1b689ec189b400731d61960b3.js": "/Textshifter/precache-manifest.d25bb6c1b689ec189b400731d61960b3.js",
     "service-worker.js": "/Textshifter/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/Textshifter/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.d3102dbe.chunk.css.map": "/Textshifter/static/css/main.d3102dbe.chunk.css.map",
+    "static/css/main.b811ad46.chunk.css.map": "/Textshifter/static/css/main.b811ad46.chunk.css.map",
     "static/js/2.55e57afc.chunk.js.LICENSE.txt": "/Textshifter/static/js/2.55e57afc.chunk.js.LICENSE.txt",
     "static/media/clipboard_dark.svg": "/Textshifter/static/media/clipboard_dark.e24c2f90.svg",
     "static/media/clipboard_light.svg": "/Textshifter/static/media/clipboard_light.2c09403c.svg",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.88db9dd9.js",
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.55e57afc.chunk.js",
-    "static/css/main.d3102dbe.chunk.css",
+    "static/css/main.b811ad46.chunk.css",
     "static/js/main.062c02b1.chunk.js"
   ]
 }
