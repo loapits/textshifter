@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "author": "Gera Kartashov <gera59377@gmail.com>",
-  "homepage": "https://loapits.github.io/Textshifter/",
+  "homepage": "https://loapits.github.io/textshifter/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loapits/Textshifter"
+    "url": "https://github.com/loapits/textshifter"
   },
   "dependencies": {
     "file-saver": "^2.0.2",
