@@ -17,7 +17,6 @@ import { IApp } from './interfaces/app_interface'
  * @returns all components in application.
  */
 export const App: React.FC<IApp> = ({mode, switchTheme}) => {
-
   /**
    * Hook useState.
    * 
