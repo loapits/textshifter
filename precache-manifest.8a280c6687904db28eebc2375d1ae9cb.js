@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ccb2d95b714d7e4da7d61c0a63556469",
+    "revision": "d99a319df1748d0ecf83a7d65fc01f8e",
     "url": "/textshifter/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/textshifter/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "e9e86eb5fd7542f87480",
-    "url": "/textshifter/static/css/main.ff88726b.chunk.css"
+    "revision": "2785e100e6afc1627425",
+    "url": "/textshifter/static/css/main.85025124.chunk.css"
   },
   {
     "revision": "b8ce5d91ed9b9eef1dca",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/textshifter/static/js/2.14d6f1a2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e9e86eb5fd7542f87480",
-    "url": "/textshifter/static/js/main.5f917e21.chunk.js"
+    "revision": "2785e100e6afc1627425",
+    "url": "/textshifter/static/js/main.1a21a09e.chunk.js"
   },
   {
     "revision": "9bf5e5bd399a094ae6bc",
@@ -48,19 +48,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/textshifter/static/media/logo.c140a131.svg"
   },
   {
-    "revision": "1e712110ecde077bd331ec5ea39a1e7f",
-    "url": "/textshifter/static/media/mode_dark.1e712110.svg"
+    "revision": "0685646ae7b810cad3eba734ec8b3957",
+    "url": "/textshifter/static/media/mode_dark.0685646a.svg"
   },
   {
-    "revision": "02f11d1f91bda442b86a5763de986296",
-    "url": "/textshifter/static/media/mode_light.02f11d1f.svg"
+    "revision": "07c4fa5645446276983d36db91d435d0",
+    "url": "/textshifter/static/media/mode_light.07c4fa56.svg"
   },
   {
     "revision": "0b4cea9058b801505e8b935c3b35a544",
     "url": "/textshifter/static/media/success_dark.0b4cea90.svg"
   },
   {
-    "revision": "c0cbd0847616c5b88e858a5e2abacdbe",
-    "url": "/textshifter/static/media/success_light.c0cbd084.svg"
+    "revision": "14af72aaa44d7d864968e96408af1c7e",
+    "url": "/textshifter/static/media/success_light.14af72aa.svg"
   }
 ]);
