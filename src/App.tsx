@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Buttons from './components/buttons/Buttons-Container'
-import Input from './components/input/InputContainer'
+import Input from './components/input/Input-Container'
 import HeaderContainer from './components/header/Header-Container'
 import './style/index.scss'
 import { lightTheme, darkTheme } from './theme'
